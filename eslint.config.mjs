@@ -12,7 +12,14 @@ const eslintConfig = defineConfig([
 			"prettier/prettier": ["error", { endOfLine: "auto" }],
 		},
 	},
-	globalIgnores([".next/**", "out/**", "build/**", "next-env.d.ts"]),
+	globalIgnores([
+		".next/**",
+		"out/**",
+		"build/**",
+		"next-env.d.ts",
+		"apollo.config.js",
+		"src/graphql/generated/**",
+	]),
 ]);
 
 export default eslintConfig;

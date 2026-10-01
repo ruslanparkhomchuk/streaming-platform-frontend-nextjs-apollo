@@ -26,7 +26,7 @@ const config = {
 	importOrderSortSpecifiers: true,
 	importOrderCaseInsensitive: true,
 	importOrderParserPlugins: ["typescript", "jsx"],
-	tailwindStylesheet: "./src/app/globals.css",
+	tailwindStylesheet: "./src/styles/globals.css",
 	plugins: [
 		"@trivago/prettier-plugin-sort-imports",
 		"prettier-plugin-tailwindcss",
