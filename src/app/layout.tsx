@@ -4,6 +4,7 @@ import { getLocale, getMessages } from "next-intl/server";
 import { Inter } from "next/font/google";
 
 import { ApolloClientProvider } from "@/providers/ApolloClientProvider";
+import { ThemeProvider } from "@/providers/ThemeProvider";
 
 import "@/styles/globals.css";
 
@@ -22,11 +23,21 @@ export default async function RootLayout({ children }: LayoutProps<"/">) {
 	const messages = await getMessages();
 
 	return (
-		<html lang={locale} className={`${inter.variable} h-full antialiased`}>
+		<html
+			lang={locale}
+			className={`${inter.variable} h-full antialiased`}
+			suppressHydrationWarning
+		>
 			<body>
 				<ApolloClientProvider>
 					<NextIntlClientProvider messages={messages}>
-						{children}
+						<ThemeProvider
+							attribute="class"
+							defaultTheme="dark"
+							disableTransitionOnChange
+						>
+							{children}
+						</ThemeProvider>
 					</NextIntlClientProvider>
 				</ApolloClientProvider>
 			</body>
