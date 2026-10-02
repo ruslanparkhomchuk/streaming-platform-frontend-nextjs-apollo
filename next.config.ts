@@ -4,7 +4,7 @@ import createNextIntlPlugin from "next-intl/plugin";
 const withNextIntl = createNextIntlPlugin("./src/libs/i18n/request.ts");
 
 const nextConfig: NextConfig = {
-	reactStrictMode: true,
+	reactStrictMode: false,
 };
 
 export default withNextIntl(nextConfig);
