@@ -1,5 +1,24 @@
 {
 	"home": {
-		"title": "Home Page"
+		"title": "Home page"
+	},
+	"auth": {
+		"register": {
+			"heading": "Sign up for Streaming Platform",
+			"backButtonLabel": "Already have an account? Log in",
+			"usernameLabel": "Username",
+			"usernameDescription": "This is the name other users will know you by.",
+			"emailLabel": "Email",
+			"emailDescription": "We may use your email to send you messages about your account.",
+			"passwordLabel": "Password",
+			"passwordDescription": "Your password must be at least 8 characters long.",
+			"submitButton": "Sign up",
+			"successAlertTitle": "Check your email",
+			"successAlertDescription": "We've sent a confirmation email to your address. If you don't see it, check your spam folder.",
+			"errorMessage": "Failed to create account"
+		},
+		"verify": {
+			"successMessage": "Account verified"
+		}
 	}
 }

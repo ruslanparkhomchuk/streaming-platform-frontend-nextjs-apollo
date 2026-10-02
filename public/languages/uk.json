@@ -1,5 +1,24 @@
 {
 	"home": {
 		"title": "Головна сторінка"
+	},
+	"auth": {
+		"register": {
+			"heading": "Реєстрація в Streaming Platform",
+			"backButtonLabel": "Вже маєте акаунт? Увійти",
+			"usernameLabel": "Ім'я користувача",
+			"usernameDescription": "Під цим ім'ям вас знатимуть інші користувачі.",
+			"emailLabel": "Пошта",
+			"emailDescription": "Ми можемо використовувати вашу пошту для надсилання повідомлень щодо облікового запису.",
+			"passwordLabel": "Пароль",
+			"passwordDescription": "Пароль має містити щонайменше 8 символів.",
+			"submitButton": "Зареєструватися",
+			"successAlertTitle": "Перевірте свою пошту",
+			"successAlertDescription": "На вашу адресу електронної пошти надіслано лист для підтвердження. Якщо ви не бачите листа, перевірте папку «Спам».",
+			"errorMessage": "Помилка під час створення акаунта"
+		},
+		"verify": {
+			"successMessage": "Акаунт підтверджено"
+		}
 	}
 }
