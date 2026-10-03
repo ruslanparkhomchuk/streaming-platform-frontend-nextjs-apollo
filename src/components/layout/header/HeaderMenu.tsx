@@ -7,14 +7,19 @@ import { Button } from "@/components/ui/common/button";
 
 import { useAuth } from "@/hooks/useAuth";
 
+import { Notifications } from "./notifications/Notifications";
+import { ProfileMenu } from "./ProfileMenu";
+
 export function HeaderMenu() {
-	const t = useTranslations("layout.headerMenu");
+	const t = useTranslations("layout.header.headerMenu");
 	const { isAuthenticated } = useAuth();
 
 	return (
 		<div className="ml-auto flex items-center gap-x-4">
 			{isAuthenticated ? (
-				<div>ProfileMenu</div>
+				<>
+					<ProfileMenu />
+				</>
 			) : (
 				<>
 					<Button variant="secondary" asChild>

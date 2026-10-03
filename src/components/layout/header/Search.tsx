@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/common/button";
 import { Input } from "@/components/ui/common/input";
 
 export function Search() {
-	const t = useTranslations("layout.search");
+	const t = useTranslations("layout.header.search");
 
 	const [searchTerm, setSearchTerm] = useState("");
 	const router = useRouter();
@@ -36,8 +36,12 @@ export function Search() {
 					onChange={e => setSearchTerm(e.target.value)}
 					className="w-full rounded-full pr-10 pl-4 lg:w-[400px]"
 				/>
-				<Button className="absolute right-0.5 h-9" type="submit">
-					<SearchIcon className="absolute size-[18px]" />
+				<Button
+					className="absolute right-0 size-9 rounded-full"
+					size="icon"
+					type="submit"
+				>
+					<SearchIcon className="size-4" />
 				</Button>
 			</form>
 		</div>

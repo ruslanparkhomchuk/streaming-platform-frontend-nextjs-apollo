@@ -19,7 +19,9 @@ export function Notifications() {
 
 	const displayCount = count > 9 ? "9+" : count;
 
-	if (isLoadingCount) return null;
+	if (isLoadingCount) {
+		return null;
+	}
 
 	return (
 		<Popover>

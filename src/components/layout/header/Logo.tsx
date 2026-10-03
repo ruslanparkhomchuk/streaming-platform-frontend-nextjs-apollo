@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 export function Logo() {
-	const t = useTranslations("layout.logo");
+	const t = useTranslations("layout.header.logo");
 
 	return (
 		<Link
@@ -13,9 +13,9 @@ export function Logo() {
 			<Image
 				src="/images/logo.svg"
 				alt="Streaming Platform"
-				width={52}
-				height={35}
-				className="h-[35px] w-auto"
+				width={54}
+				height={36}
+				className="h-9 w-auto"
 			/>
 			<div className="hidden leading-tight lg:block">
 				<h2 className="text-lg font-semibold tracking-wider text-accent-foreground">

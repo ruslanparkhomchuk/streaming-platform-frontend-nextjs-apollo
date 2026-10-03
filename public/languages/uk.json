@@ -1,51 +1,55 @@
 {
 	"layout": {
-		"logo": {
-			"platform": "Платформа для стрімів"
-		},
-		"headerMenu": {
-			"login": "Увійти",
-			"register": "Реєстрація",
-			"profileMenu": {
-				"successMessage": "Ви успішно вийшли з системи",
-				"errorMessage": "Помилка під час виходу",
-				"channel": "Мій канал",
-				"dashboard": "Панель керування",
-				"logout": "Вийти",
-				"notifications": {
-					"heading": "Сповіщення",
-					"loading": "Завантаження...",
-					"empty": "У вас немає сповіщень"
+		"header": {
+			"logo": {
+				"platform": "Платформа для стрімів"
+			},
+			"headerMenu": {
+				"login": "Увійти",
+				"register": "Реєстрація",
+				"profileMenu": {
+					"successMessage": "Ви успішно вийшли з системи",
+					"errorMessage": "Помилка під час виходу",
+					"channel": "Мій канал",
+					"dashboard": "Панель керування",
+					"logout": "Вийти",
+					"notifications": {
+						"heading": "Сповіщення",
+						"loading": "Завантаження...",
+						"empty": "У вас немає сповіщень"
+					}
 				}
+			},
+			"search": {
+				"placeholder": "Пошук"
 			}
 		},
-		"search": {
-			"placeholder": "Пошук"
-		},
-		"dashboardNav": {
-			"settings": "Налаштування",
-			"streamSettings": "Налаштування стріму",
-			"keys": "Ключі для стріму",
-			"chatSettings": "Налаштування чату",
-			"followers": "Підписники",
-			"sponsors": "Спонсори",
-			"premium": "Преміум-плани",
-			"transactions": "Транзакції"
-		},
-		"sidebarHeader": {
-			"expand": "Розгорнути",
-			"collapse": "Згорнути",
-			"navigation": "Навігація",
-			"forYou": "Для вас"
-		},
-		"userNav": {
-			"home": "Головна",
-			"categories": "Категорії",
-			"streams": "Трансляції",
-			"recommended": "Рекомендації"
-		},
-		"recommended": {
-			"heading": "Рекомендації"
+
+		"sidebar": {
+			"header": {
+				"expand": "Розгорнути",
+				"collapse": "Згорнути",
+				"navigation": "Навігація"
+			},
+			"userNav": {
+				"home": "Головна",
+				"categories": "Категорії",
+				"streams": "Трансляції",
+				"recommended": "Рекомендації"
+			},
+			"recommended": {
+				"heading": "Рекомендації"
+			},
+			"dashboardNav": {
+				"settings": "Налаштування",
+				"streamSettings": "Налаштування стріму",
+				"keys": "Ключі для стріму",
+				"chatSettings": "Налаштування чату",
+				"followers": "Підписники",
+				"sponsors": "Спонсори",
+				"premium": "Преміум-плани",
+				"transactions": "Транзакції"
+			}
 		}
 	},
 	"auth": {
@@ -102,6 +106,11 @@
 			"submitButton": "Скинути пароль",
 			"successMessage": "Пароль успішно змінено",
 			"errorMessage": "Помилка під час встановлення нового пароля"
+		}
+	},
+	"components": {
+		"liveBadge": {
+			"text": "НАЖИВО"
 		}
 	}
 }

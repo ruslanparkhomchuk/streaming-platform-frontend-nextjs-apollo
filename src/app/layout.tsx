@@ -6,6 +6,7 @@ import { Inter } from "next/font/google";
 import { ApolloClientProvider } from "@/providers/ApolloClientProvider";
 import { ThemeProvider } from "@/providers/ThemeProvider";
 import { ToastProvider } from "@/providers/ToastProvider";
+import { TooltipProvider } from "@/providers/TooltipProvider";
 
 import "@/styles/globals.css";
 
@@ -27,6 +28,7 @@ export default async function RootLayout({ children }: LayoutProps<"/">) {
 		<html
 			lang={locale}
 			className={`${inter.variable} h-full antialiased`}
+			data-scroll-behavior="smooth"
 			suppressHydrationWarning
 		>
 			<body>
@@ -37,8 +39,10 @@ export default async function RootLayout({ children }: LayoutProps<"/">) {
 							defaultTheme="dark"
 							disableTransitionOnChange
 						>
-							{children}
-							<ToastProvider />
+							<TooltipProvider>
+								{children}
+								<ToastProvider />
+							</TooltipProvider>
 						</ThemeProvider>
 					</NextIntlClientProvider>
 				</ApolloClientProvider>

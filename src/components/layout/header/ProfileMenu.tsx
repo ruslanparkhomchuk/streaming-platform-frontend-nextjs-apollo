@@ -23,7 +23,7 @@ import { useCurrent } from "@/hooks/useCurrent";
 import { Notifications } from "./notifications/Notifications";
 
 export function ProfileMenu() {
-	const t = useTranslations("layout.headerMenu.profileMenu");
+	const t = useTranslations("layout.header.headerMenu.profileMenu");
 	const router = useRouter();
 
 	const { exit } = useAuth();
@@ -59,18 +59,18 @@ export function ProfileMenu() {
 					<DropdownMenuSeparator />
 					<DropdownMenuItem asChild>
 						<Link href={`/${user.username}`}>
-							<User className="mr-2 size-2" />
+							<User className="mr-2 size-4" />
 							{t("channel")}
 						</Link>
 					</DropdownMenuItem>
 					<DropdownMenuItem asChild>
 						<Link href="/dashboard/settings">
-							<LayoutDashboard className="mr-2 size-2" />
+							<LayoutDashboard className="mr-2 size-4" />
 							{t("dashboard")}
 						</Link>
 					</DropdownMenuItem>
 					<DropdownMenuItem onClick={() => logout()}>
-						<LogOut className="mr-2 size-2" />
+						<LogOut className="mr-2 size-4" />
 						{t("logout")}
 					</DropdownMenuItem>
 				</DropdownMenuContent>

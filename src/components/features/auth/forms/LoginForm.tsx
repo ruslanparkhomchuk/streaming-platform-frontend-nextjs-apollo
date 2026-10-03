@@ -68,7 +68,9 @@ export function LoginForm() {
 	const { isValid } = form.formState;
 
 	function onSubmit(data: TypeLoginSchema) {
-		login({ variables: { data } });
+		const { pin, ...rest } = data;
+
+		login({ variables: { data: pin ? data : rest } });
 	}
 
 	return (

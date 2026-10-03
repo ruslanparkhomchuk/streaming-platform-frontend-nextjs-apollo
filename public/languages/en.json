@@ -1,51 +1,54 @@
 {
 	"layout": {
-		"logo": {
-			"platform": "Live streaming platform"
-		},
-		"headerMenu": {
-			"login": "Log in",
-			"register": "Sign up",
-			"profileMenu": {
-				"successMessage": "You've logged out successfully",
-				"errorMessage": "Failed to log out",
-				"channel": "My channel",
-				"dashboard": "Dashboard",
-				"logout": "Log out",
-				"notifications": {
-					"heading": "Notifications",
-					"loading": "Loading...",
-					"empty": "You don't have any notifications"
+		"header": {
+			"logo": {
+				"platform": "Live streaming platform"
+			},
+			"headerMenu": {
+				"login": "Log in",
+				"register": "Sign up",
+				"profileMenu": {
+					"successMessage": "You've logged out successfully",
+					"errorMessage": "Failed to log out",
+					"channel": "My channel",
+					"dashboard": "Dashboard",
+					"logout": "Log out",
+					"notifications": {
+						"heading": "Notifications",
+						"loading": "Loading...",
+						"empty": "You don't have any notifications"
+					}
 				}
+			},
+			"search": {
+				"placeholder": "Search"
 			}
 		},
-		"search": {
-			"placeholder": "Search"
-		},
-		"dashboardNav": {
-			"settings": "Settings",
-			"streamSettings": "Stream settings",
-			"keys": "Stream keys",
-			"chatSettings": "Chat settings",
-			"followers": "Followers",
-			"sponsors": "Sponsors",
-			"premium": "Premium plans",
-			"transactions": "Transactions"
-		},
-		"sidebarHeader": {
-			"expand": "Expand",
-			"collapse": "Collapse",
-			"navigation": "Navigation",
-			"forYou": "For you"
-		},
-		"userNav": {
-			"home": "Home",
-			"categories": "Categories",
-			"streams": "Streams",
-			"recommended": "Recommended"
-		},
-		"recommended": {
-			"heading": "Recommended"
+		"sidebar": {
+			"header": {
+				"expand": "Expand",
+				"collapse": "Collapse",
+				"navigation": "Navigation"
+			},
+			"userNav": {
+				"home": "Home",
+				"categories": "Categories",
+				"streams": "Streams",
+				"recommended": "Recommended"
+			},
+			"recommended": {
+				"heading": "Recommendations"
+			},
+			"dashboardNav": {
+				"settings": "Settings",
+				"streamSettings": "Stream Settings",
+				"keys": "Stream Keys",
+				"chatSettings": "Chat Settings",
+				"followers": "Followers",
+				"sponsors": "Sponsors",
+				"premium": "Premium Plans",
+				"transactions": "Transactions"
+			}
 		}
 	},
 	"auth": {
@@ -102,6 +105,11 @@
 			"submitButton": "Reset password",
 			"successMessage": "Password changed successfully",
 			"errorMessage": "Failed to set new password"
+		}
+	},
+	"components": {
+		"liveBadge": {
+			"text": "LIVE"
 		}
 	}
 }
