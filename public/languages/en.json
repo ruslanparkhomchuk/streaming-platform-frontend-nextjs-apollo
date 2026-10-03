@@ -45,6 +45,17 @@
 			"successAlertTitle": "Link sent",
 			"successAlertDescription": "We've sent a password reset link to your email. If you have Telegram notifications turned on, we've sent the link there too.",
 			"errorMessage": "Failed to reset password"
+		},
+		"newPassword": {
+			"heading": "New password",
+			"backButtonLabel": "Already have an account? Log in",
+			"passwordLabel": "New password",
+			"passwordDescription": "Your new password must be at least 8 characters long.",
+			"passwordRepeatLabel": "Repeat password",
+			"passwordRepeatDescription": "Repeat your new password to confirm it.",
+			"submitButton": "Reset password",
+			"successMessage": "Password changed successfully",
+			"errorMessage": "Failed to set new password"
 		}
 	}
 }

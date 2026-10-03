@@ -45,6 +45,17 @@
 			"successAlertTitle": "Посилання надіслано",
 			"successAlertDescription": "Ми надіслали посилання для скидання пароля на вашу пошту. Якщо у вас увімкнені сповіщення в Telegram, посилання також надіслано туди.",
 			"errorMessage": "Помилка під час скидання пароля"
+		},
+		"newPassword": {
+			"heading": "Новий пароль",
+			"backButtonLabel": "Вже маєте акаунт? Увійти",
+			"passwordLabel": "Новий пароль",
+			"passwordDescription": "Новий пароль має містити щонайменше 8 символів.",
+			"passwordRepeatLabel": "Повторіть пароль",
+			"passwordRepeatDescription": "Повторіть новий пароль для підтвердження.",
+			"submitButton": "Скинути пароль",
+			"successMessage": "Пароль успішно змінено",
+			"errorMessage": "Помилка під час встановлення нового пароля"
 		}
 	}
 }
