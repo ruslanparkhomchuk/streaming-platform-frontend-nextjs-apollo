@@ -1,6 +1,52 @@
 {
-	"home": {
-		"title": "Головна сторінка"
+	"layout": {
+		"logo": {
+			"platform": "Платформа для стрімів"
+		},
+		"headerMenu": {
+			"login": "Увійти",
+			"register": "Реєстрація",
+			"profileMenu": {
+				"successMessage": "Ви успішно вийшли з системи",
+				"errorMessage": "Помилка під час виходу",
+				"channel": "Мій канал",
+				"dashboard": "Панель керування",
+				"logout": "Вийти",
+				"notifications": {
+					"heading": "Сповіщення",
+					"loading": "Завантаження...",
+					"empty": "У вас немає сповіщень"
+				}
+			}
+		},
+		"search": {
+			"placeholder": "Пошук"
+		},
+		"dashboardNav": {
+			"settings": "Налаштування",
+			"streamSettings": "Налаштування стріму",
+			"keys": "Ключі для стріму",
+			"chatSettings": "Налаштування чату",
+			"followers": "Підписники",
+			"sponsors": "Спонсори",
+			"premium": "Преміум-плани",
+			"transactions": "Транзакції"
+		},
+		"sidebarHeader": {
+			"expand": "Розгорнути",
+			"collapse": "Згорнути",
+			"navigation": "Навігація",
+			"forYou": "Для вас"
+		},
+		"userNav": {
+			"home": "Головна",
+			"categories": "Категорії",
+			"streams": "Трансляції",
+			"recommended": "Рекомендації"
+		},
+		"recommended": {
+			"heading": "Рекомендації"
+		}
 	},
 	"auth": {
 		"register": {
