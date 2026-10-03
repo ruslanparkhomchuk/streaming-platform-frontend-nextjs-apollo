@@ -21,6 +21,30 @@
 			"successMessage": "Акаунт підтверджено",
 			"errorMessage": "Помилка під час верифікації",
 			"heading": "Верифікація акаунта"
+		},
+		"login": {
+			"heading": "Увійти в Streaming Platform",
+			"backButtonLabel": "Немає облікового запису? Зареєструйтеся!",
+			"loginLabel": "Логін",
+			"loginDescription": "Ваше ім'я або пошта, які ви вказували під час реєстрації.",
+			"passwordLabel": "Пароль",
+			"passwordDescription": "Пароль, який ви вказували під час реєстрації.",
+			"forgotPassword": "Забули пароль?",
+			"pinLabel": "6-значний код",
+			"pinDescription": "Введіть код із вашого застосунку для автентифікації.",
+			"submitButton": "Увійти",
+			"successMessage": "Ви успішно увійшли в систему",
+			"errorMessage": "Помилка під час входу в систему"
+		},
+		"resetPassword": {
+			"heading": "Скидання пароля",
+			"backButtonLabel": "Вже маєте акаунт? Увійти",
+			"emailLabel": "Пошта",
+			"emailDescription": "Пошта, яку ви вказували під час реєстрації.",
+			"submitButton": "Скинути пароль",
+			"successAlertTitle": "Посилання надіслано",
+			"successAlertDescription": "Ми надіслали посилання для скидання пароля на вашу пошту. Якщо у вас увімкнені сповіщення в Telegram, посилання також надіслано туди.",
+			"errorMessage": "Помилка під час скидання пароля"
 		}
 	}
 }

@@ -21,6 +21,30 @@
 			"successMessage": "Account verified",
 			"errorMessage": "Verification failed",
 			"heading": "Account verification"
+		},
+		"login": {
+			"heading": "Log in to Streaming Platform",
+			"backButtonLabel": "Don't have an account? Sign up!",
+			"loginLabel": "Login",
+			"loginDescription": "The username or email you signed up with.",
+			"passwordLabel": "Password",
+			"passwordDescription": "The password you signed up with.",
+			"forgotPassword": "Forgot your password?",
+			"pinLabel": "6-digit code",
+			"pinDescription": "Enter the code from your authenticator app.",
+			"submitButton": "Log in",
+			"successMessage": "You've logged in successfully",
+			"errorMessage": "Failed to log in"
+		},
+		"resetPassword": {
+			"heading": "Reset password",
+			"backButtonLabel": "Already have an account? Log in",
+			"emailLabel": "Email",
+			"emailDescription": "The email you signed up with.",
+			"submitButton": "Reset password",
+			"successAlertTitle": "Link sent",
+			"successAlertDescription": "We've sent a password reset link to your email. If you have Telegram notifications turned on, we've sent the link there too.",
+			"errorMessage": "Failed to reset password"
 		}
 	}
 }
