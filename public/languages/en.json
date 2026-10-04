@@ -107,9 +107,84 @@
 			"errorMessage": "Failed to set new password"
 		}
 	},
+	"dashboard": {
+		"settings": {
+			"header": {
+				"heading": "Settings",
+				"description": "Manage your settings here",
+				"profile": "Profile",
+				"account": "Account",
+				"appearance": "Appearance",
+				"notifications": "Notifications",
+				"sessions": "Sessions"
+			},
+			"profile": {
+				"header": {
+					"heading": "Profile",
+					"description": "Set up your profile: update your avatar, edit your info and add links to your social media to make your page more appealing to other users."
+				},
+				"avatar": {
+					"heading": "Profile picture",
+					"updateButton": "Update profile picture",
+					"confirmModal": {
+						"heading": "Remove avatar",
+						"message": "Are you sure you want to remove your profile picture? This can't be undone."
+					},
+					"info": "Supported formats: JPG, JPEG, PNG, WEBP or GIF. Max size: 10 MB.",
+					"successUpdateMessage": "Profile picture updated",
+					"errorUpdateMessage": "Failed to update profile picture",
+					"successRemoveMessage": "Profile picture removed",
+					"errorRemoveMessage": "Failed to remove profile picture"
+				},
+				"info": {
+					"heading": "Profile settings",
+					"usernameLabel": "Username",
+					"usernamePlaceholder": "johndoe",
+					"usernameDescription": "This is the name other users will know you by.",
+					"displayNameLabel": "Display name",
+					"displayNamePlaceholder": "John Doe",
+					"displayNameDescription": "Capitalize the letters in your username however you like.",
+					"bioLabel": "About",
+					"bioPlaceholder": "I love programming",
+					"bioDescription": "Your bio can be up to 300 characters long.",
+					"submitButton": "Save changes",
+					"successMessage": "Profile updated",
+					"errorMessage": "Failed to update profile"
+				},
+				"socialLinks": {
+					"createForm": {
+						"heading": "Social links",
+						"titleLabel": "Link title",
+						"titlePlaceholder": "YouTube",
+						"titleDescription": "The text shown for the link.",
+						"urlLabel": "Link URL",
+						"urlPlaceholder": "https://github.com/username",
+						"urlDescription": "Where does this link go? Enter the full URL, for example https://github.com/username",
+						"submitButton": "Add",
+						"successMessage": "Social link added",
+						"errorMessage": "Failed to add social link"
+					},
+					"editForm": {
+						"cancelButton": "Cancel",
+						"submitButton": "Save",
+						"successUpdateMessage": "Social link updated",
+						"errorUpdateMessage": "Failed to update social link",
+						"successRemoveMessage": "Social link removed",
+						"errorRemoveMessage": "Failed to remove social link"
+					},
+					"successReorderMessage": "Social links reordered",
+					"errorReorderMessage": "Failed to reorder social links"
+				}
+			}
+		}
+	},
 	"components": {
 		"liveBadge": {
 			"text": "LIVE"
+		},
+		"confirmModal": {
+			"cancel": "Cancel",
+			"continue": "Continue"
 		}
 	}
 }

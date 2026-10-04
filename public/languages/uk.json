@@ -108,9 +108,84 @@
 			"errorMessage": "Помилка під час встановлення нового пароля"
 		}
 	},
+	"dashboard": {
+		"settings": {
+			"header": {
+				"heading": "Налаштування",
+				"description": "Тут ви можете керувати своїми налаштуваннями",
+				"profile": "Профіль",
+				"account": "Акаунт",
+				"appearance": "Зовнішній вигляд",
+				"notifications": "Сповіщення",
+				"sessions": "Сесії"
+			},
+			"profile": {
+				"header": {
+					"heading": "Профіль",
+					"description": "Налаштуйте свій профіль: оновіть аватар, змініть інформацію про себе та додайте посилання на соціальні мережі, щоб зробити свою сторінку привабливішою для інших користувачів."
+				},
+				"avatar": {
+					"heading": "Зображення профілю",
+					"updateButton": "Оновити зображення профілю",
+					"confirmModal": {
+						"heading": "Видалення аватара",
+						"message": "Ви впевнені, що хочете видалити зображення профілю? Цю дію не можна буде скасувати."
+					},
+					"info": "Підтримувані формати: JPG, JPEG, PNG, WEBP або GIF. Макс. розмір: 10 МБ.",
+					"successUpdateMessage": "Зображення профілю успішно оновлено",
+					"errorUpdateMessage": "Помилка під час оновлення зображення профілю",
+					"successRemoveMessage": "Зображення профілю видалено",
+					"errorRemoveMessage": "Помилка під час видалення зображення профілю"
+				},
+				"info": {
+					"heading": "Налаштування профілю",
+					"usernameLabel": "Ім'я користувача",
+					"usernamePlaceholder": "johndoe",
+					"usernameDescription": "Під цим ім'ям вас знатимуть інші користувачі.",
+					"displayNameLabel": "Відображуване ім'я",
+					"displayNamePlaceholder": "John Doe",
+					"displayNameDescription": "Розставте великі літери в імені користувача на свій смак.",
+					"bioLabel": "Про себе",
+					"bioPlaceholder": "Я люблю програмувати",
+					"bioDescription": "Інформація про себе має містити не більше 300 символів.",
+					"submitButton": "Зберегти зміни",
+					"successMessage": "Профіль успішно оновлено",
+					"errorMessage": "Помилка під час оновлення профілю"
+				},
+				"socialLinks": {
+					"createForm": {
+						"heading": "Посилання на соцмережі",
+						"titleLabel": "Назва посилання",
+						"titlePlaceholder": "YouTube",
+						"titleDescription": "Текст посилання.",
+						"urlLabel": "URL посилання",
+						"urlPlaceholder": "https://github.com/username",
+						"urlDescription": "Куди веде це посилання? Введіть повну URL-адресу, наприклад https://github.com/username",
+						"submitButton": "Додати",
+						"successMessage": "Посилання на соцмережу успішно додано",
+						"errorMessage": "Помилка під час додавання посилання на соцмережу"
+					},
+					"editForm": {
+						"cancelButton": "Скасувати",
+						"submitButton": "Зберегти",
+						"successUpdateMessage": "Посилання на соцмережу успішно змінено",
+						"errorUpdateMessage": "Помилка під час оновлення посилання на соцмережу",
+						"successRemoveMessage": "Посилання на соцмережу успішно видалено",
+						"errorRemoveMessage": "Помилка під час видалення посилання на соцмережу"
+					},
+					"successReorderMessage": "Порядок посилань на соцмережі змінено",
+					"errorReorderMessage": "Помилка під час зміни порядку посилань на соцмережі"
+				}
+			}
+		}
+	},
 	"components": {
 		"liveBadge": {
 			"text": "НАЖИВО"
+		},
+		"confirmModal": {
+			"cancel": "Скасувати",
+			"continue": "Продовжити"
 		}
 	}
 }
