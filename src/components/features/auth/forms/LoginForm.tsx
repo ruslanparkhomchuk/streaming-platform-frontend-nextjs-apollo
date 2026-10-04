@@ -89,7 +89,7 @@ export function LoginForm() {
 							control={form.control}
 							name="pin"
 							render={({ field }) => (
-								<FormItem>
+								<FormItem className="flex flex-col items-center text-center">
 									<FormLabel>{t("pinLabel")}</FormLabel>
 									<FormControl>
 										<InputOTP maxLength={6} {...field}>

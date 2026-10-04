@@ -8,6 +8,10 @@ import {
 } from "@/components/ui/common/tabs";
 import { Heading } from "@/components/ui/elements/Heading";
 
+import { ChangeEmailForm } from "./account/ChangeEmailForm";
+import { ChangePasswordForm } from "./account/ChangePasswordForm";
+import { DeactivateCard } from "./account/DeactivateCard";
+import { WrapperTotp } from "./account/WrapperTotp";
 import { ChangeAvatarForm } from "./profile/ChangeAvatarForm";
 import { ChangeInfoForm } from "./profile/ChangeInfoForm";
 import { SocialLinksForm } from "./profile/SocialLinksForm";
@@ -51,7 +55,30 @@ export function UserSettings() {
 						<SocialLinksForm />
 					</div>
 				</TabsContent>
-				<TabsContent value="account"></TabsContent>
+				<TabsContent value="account">
+					<div className="mt-5 space-y-6">
+						<Heading
+							title={t("account.header.heading")}
+							description={t("account.header.description")}
+						/>
+						<ChangeEmailForm />
+						<ChangePasswordForm />
+						<Heading
+							title={t("account.header.securityHeading")}
+							description={t(
+								"account.header.securityDescription",
+							)}
+						/>
+						<WrapperTotp />
+						<Heading
+							title={t("account.header.deactivationHeading")}
+							description={t(
+								"account.header.deactivationDescription",
+							)}
+						/>
+						<DeactivateCard />
+					</div>
+				</TabsContent>
 				<TabsContent value="appearance"></TabsContent>
 				<TabsContent value="notifications"></TabsContent>
 				<TabsContent value="sessions"></TabsContent>
