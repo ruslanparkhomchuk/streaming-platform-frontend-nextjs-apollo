@@ -440,6 +440,21 @@
 				"successMessage": "Plan removed",
 				"removeMessage": "Couldn't remove the plan"
 			}
+		},
+		"transactions": {
+			"header": {
+				"heading": "Transactions",
+				"description": "Here are the transactions for your channel sponsorships."
+			},
+			"columns": {
+				"date": "Created",
+				"status": "Status",
+				"success": "Successful",
+				"pending": "Pending",
+				"failed": "Failed",
+				"expired": "Expired",
+				"amount": "Amount"
+			}
 		}
 	},
 	"components": {

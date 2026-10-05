@@ -441,6 +441,21 @@
 				"successMessage": "План видалено",
 				"removeMessage": "Не вдалося видалити план"
 			}
+		},
+		"transactions": {
+			"header": {
+				"heading": "Транзакції",
+				"description": "Тут показано транзакції, пов'язані з оформленням спонсорства на канали."
+			},
+			"columns": {
+				"date": "Дата створення",
+				"status": "Статус",
+				"success": "Успішно",
+				"pending": "В очікуванні",
+				"failed": "Помилка",
+				"expired": "Термін минув",
+				"amount": "Сума"
+			}
 		}
 	},
 	"components": {
