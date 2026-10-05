@@ -381,6 +381,18 @@
 			},
 			"successMessage": "Chat settings updated",
 			"errorMessage": "Couldn't update chat settings"
+		},
+		"followers": {
+			"header": {
+				"heading": "Followers",
+				"description": "Here's a list of all your followers."
+			},
+			"columns": {
+				"date": "Date",
+				"user": "User",
+				"actions": "Actions",
+				"viewChannel": "View channel"
+			}
 		}
 	},
 	"components": {
@@ -393,6 +405,9 @@
 		},
 		"copyButton": {
 			"successMessage": "Copied"
+		},
+		"dataTable": {
+			"notFound": "Nothing found"
 		}
 	},
 	"utils": {

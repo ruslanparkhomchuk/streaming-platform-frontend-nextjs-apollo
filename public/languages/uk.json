@@ -382,6 +382,18 @@
 			},
 			"successMessage": "Налаштування чату оновлено",
 			"errorMessage": "Не вдалося оновити налаштування чату"
+		},
+		"followers": {
+			"header": {
+				"heading": "Підписники",
+				"description": "Тут показано всіх ваших підписників."
+			},
+			"columns": {
+				"date": "Дата",
+				"user": "Користувач",
+				"actions": "Дії",
+				"viewChannel": "Перейти на канал"
+			}
 		}
 	},
 	"components": {
@@ -394,6 +406,9 @@
 		},
 		"copyButton": {
 			"successMessage": "Скопійовано"
+		},
+		"dataTable": {
+			"notFound": "Нічого не знайдено"
 		}
 	},
 	"utils": {
