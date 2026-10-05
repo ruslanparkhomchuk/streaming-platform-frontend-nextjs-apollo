@@ -361,6 +361,26 @@
 				"successMessage": "Ingress created",
 				"errorMessage": "Couldn't create the ingress"
 			}
+		},
+		"chat": {
+			"header": {
+				"heading": "Chat settings",
+				"description": "Manage the chat settings for your channel here."
+			},
+			"isChatEnabled": {
+				"heading": "Enable chat",
+				"description": "When chat is on, viewers can send messages during your stream."
+			},
+			"isChatFollowersOnly": {
+				"heading": "Followers-only chat",
+				"description": "When this is on, only your followers can send messages in chat."
+			},
+			"isChatPremiumFollowersOnly": {
+				"heading": "Premium followers-only chat",
+				"description": "When this is on, only your premium followers can send messages in chat."
+			},
+			"successMessage": "Chat settings updated",
+			"errorMessage": "Couldn't update chat settings"
 		}
 	},
 	"components": {
