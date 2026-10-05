@@ -406,6 +406,40 @@
 				"actions": "Actions",
 				"viewChannel": "View channel"
 			}
+		},
+		"plans": {
+			"header": {
+				"heading": "Premium plans",
+				"description": "Here's a list of all the premium plans for your channel."
+			},
+			"alert": {
+				"heading": "Channel verification required",
+				"description": "To create premium plans, your channel has to be verified. All it takes is 10 followers, and you'll get the checkmark and access to this feature."
+			},
+			"createForm": {
+				"trigger": "Create plan",
+				"heading": "Create plan",
+				"titleLabel": "Title",
+				"titlePlaceholder": "Premium channel subscription",
+				"titleDescription": "Enter a name for your plan. Your followers will see it.",
+				"descriptionLabel": "Description",
+				"descriptionPlaceholder": "Describe what your plan includes",
+				"descriptionDescription": "Describe what your plan includes, so followers know what they get.",
+				"priceLabel": "Price",
+				"priceDescription": "Set the price of your plan. This is what users will pay for the subscription.",
+				"submitButton": "Create",
+				"successMessage": "Premium plan created",
+				"errorMessage": "Couldn't create the plan"
+			},
+			"columns": {
+				"date": "Created",
+				"title": "Title",
+				"price": "Price",
+				"actions": "Actions",
+				"remove": "Remove",
+				"successMessage": "Plan removed",
+				"removeMessage": "Couldn't remove the plan"
+			}
 		}
 	},
 	"components": {
