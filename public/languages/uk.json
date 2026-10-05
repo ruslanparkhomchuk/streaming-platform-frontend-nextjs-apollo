@@ -310,6 +310,58 @@
 					"createdAt": "Дата створення:"
 				}
 			}
+		},
+		"keys": {
+			"header": {
+				"heading": "Ключі для стриму",
+				"description": "Згенеруйте URL і ключ, щоб почати трансляцію."
+			},
+			"url": {
+				"heading": "URL"
+			},
+			"key": {
+				"heading": "Ключ"
+			},
+			"instructionModal": {
+				"trigger": "Інструкція",
+				"heading": "🛠️ Як налаштувати OBS для трансляцій 🛠️",
+				"description": "Щоб почати стрімити, підключіть OBS Studio за цією інструкцією. Це кілька простих кроків, і ви в ефірі!",
+				"step1Title": "🔑 Крок 1: Завантаження OBS Studio і генерація Server URL та Stream Key",
+				"step1Description": "Для трансляції потрібні дві речі: Server URL і Stream Key (ключ стриму). Ось що треба зробити:",
+				"downloadObs": "Завантажте OBS Studio",
+				"downloadObsDescription": "Перш ніж налаштовувати трансляцію, завантажте та встановіть програму",
+				"obsLinkText": "OBS Studio",
+				"copyKeys": "Скопіюйте Server URL і Stream Key",
+				"copyKeysDescription": "Після генерації на екрані з'являться два поля: Server URL і Stream Key. Натисніть іконку копіювання біля кожного, щоб скопіювати значення в буфер обміну.",
+				"step2Title": "⚙️ Крок 2: Налаштування OBS Studio",
+				"step2Description": "Тепер, коли все потрібне є, налаштуємо OBS для вашої трансляції:",
+				"openObs": "Відкрийте OBS Studio",
+				"openObsDescription": "Якщо OBS ще не встановлено, завантажте його з офіційного сайту та встановіть. Після запуску відкриється головне вікно OBS.",
+				"openStreamSettings": "Відкрийте налаштування трансляції",
+				"openStreamSettingsDescription": "У верхньому меню натисніть «Файл» → «Налаштування» і перейдіть на вкладку «Трансляція».",
+				"enterDetails": "Введіть свої дані",
+				"enterDetailsDescription": "У полі «Сервіс» оберіть «Власний...». Вставте скопійований Server URL у поле «Сервер», а Stream Key — у поле «Ключ потоку».",
+				"saveSettings": "Збережіть налаштування",
+				"saveSettingsDescription": "Натисніть «Застосувати», а потім «Гаразд», щоб зберегти зміни.",
+				"step3Title": "🚀 Крок 3: Початок трансляції",
+				"step3Description": "OBS налаштовано, тож можна виходити в ефір:",
+				"startStream": "Запустіть трансляцію",
+				"startStreamDescription": "Поверніться в головне вікно OBS і натисніть «Почати трансляцію».",
+				"monitorStream": "Стежте за трансляцією",
+				"monitorStreamDescription": "Трансляція почнеться в реальному часі, і ви зможете стежити за нею і на платформі, і в OBS.",
+				"congrats": "✨ Вітаємо! OBS налаштовано для трансляцій на нашій платформі. Глядачі вже чекають на ваш контент! 🎉",
+				"close": "Закрити"
+			},
+			"createModal": {
+				"trigger": "Згенерувати ключі",
+				"heading": "Генерація ключів",
+				"ingressTypeLabel": "Тип підключення",
+				"ingressTypePlaceholder": "Оберіть тип підключення",
+				"ingressTypeDescription": "Оберіть RTMP для звичайного мовлення або WHIP для підключення через WebRTC.",
+				"submitButton": "Згенерувати",
+				"successMessage": "Вхідний потік створено",
+				"errorMessage": "Не вдалося створити вхідний потік"
+			}
 		}
 	},
 	"components": {
@@ -319,6 +371,9 @@
 		"confirmModal": {
 			"cancel": "Скасувати",
 			"continue": "Продовжити"
+		},
+		"copyButton": {
+			"successMessage": "Скопійовано"
 		}
 	},
 	"utils": {

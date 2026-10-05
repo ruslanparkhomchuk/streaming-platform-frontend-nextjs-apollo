@@ -3,11 +3,14 @@ import type { PropsWithChildren, ReactNode } from "react";
 
 import { Card } from "@/components/ui/common/card";
 
+import { cn } from "@/utils/tw-merge";
+
 interface CardContainerProps {
 	heading: string;
-	description: string;
+	description?: string;
 	icon?: LucideIcon;
 	rightContent?: ReactNode;
+	isRightContentFull?: boolean;
 }
 
 export function CardContainer({
@@ -15,6 +18,7 @@ export function CardContainer({
 	description,
 	icon: Icon,
 	rightContent,
+	isRightContentFull,
 	children,
 }: PropsWithChildren<CardContainerProps>) {
 	return (
@@ -30,12 +34,18 @@ export function CardContainer({
 						<h2 className="font-semibold tracking-wide">
 							{heading}
 						</h2>
-						<p className="max-w-4xl text-sm text-muted-foreground">
-							{description}
-						</p>
+						{description && (
+							<p className="max-w-4xl text-sm text-muted-foreground">
+								{description}
+							</p>
+						)}
 					</div>
 				</div>
-				{rightContent && <div>{rightContent}</div>}
+				{rightContent && (
+					<div className={cn(isRightContentFull && "ml-6 w-full")}>
+						{rightContent}
+					</div>
+				)}
 			</div>
 			{children && <div className="mt-4">{children}</div>}
 		</Card>
