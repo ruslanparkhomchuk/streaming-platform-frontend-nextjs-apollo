@@ -264,6 +264,22 @@
 					"selectPlaceholder": "Select a language",
 					"successMessage": "Site language changed"
 				}
+			},
+			"notifications": {
+				"header": {
+					"heading": "Notifications",
+					"description": "Choose how you want to get notifications from Streaming Platform. We'll let you know when channels you follow go live and when you get new followers."
+				},
+				"siteNotifications": {
+					"heading": "Site notifications",
+					"description": "If you turn off site notifications, you won't hear about new followers on your channel or new streams."
+				},
+				"telegramNotifications": {
+					"heading": "Telegram notifications",
+					"description": "If you turn on Telegram notifications, your Streaming Platform account will be linked to your Telegram account. You'll get messages there about new followers, new streams, password resets and two-factor codes."
+				},
+				"successMessage": "Notification settings updated",
+				"errorMessage": "Couldn't update notification settings"
 			}
 		}
 	},
