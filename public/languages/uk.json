@@ -394,6 +394,19 @@
 				"actions": "Дії",
 				"viewChannel": "Перейти на канал"
 			}
+		},
+		"sponsors": {
+			"header": {
+				"heading": "Спонсори",
+				"description": "Тут показано всіх ваших спонсорів."
+			},
+			"columns": {
+				"date": "Дата закінчення",
+				"user": "Користувач",
+				"plan": "План",
+				"actions": "Дії",
+				"viewChannel": "Перейти на канал"
+			}
 		}
 	},
 	"components": {

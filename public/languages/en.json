@@ -393,6 +393,19 @@
 				"actions": "Actions",
 				"viewChannel": "View channel"
 			}
+		},
+		"sponsors": {
+			"header": {
+				"heading": "Sponsors",
+				"description": "Here's a list of all your sponsors."
+			},
+			"columns": {
+				"date": "Expires",
+				"user": "User",
+				"plan": "Plan",
+				"actions": "Actions",
+				"viewChannel": "View channel"
+			}
 		}
 	},
 	"components": {
