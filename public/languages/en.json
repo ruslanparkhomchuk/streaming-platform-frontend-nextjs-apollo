@@ -280,6 +280,34 @@
 				},
 				"successMessage": "Notification settings updated",
 				"errorMessage": "Couldn't update notification settings"
+			},
+			"sessions": {
+				"header": {
+					"heading": "Sessions",
+					"description": "Sessions are the devices you use or have used to sign in to your Streaming Platform account. Here you can see the sessions that are active right now."
+				},
+				"info": {
+					"current": "Current session",
+					"active": "Active sessions",
+					"notFound": "No active sessions found"
+				},
+				"sessionItem": {
+					"deleteButton": "Remove",
+					"detailsButton": "Details",
+					"confirmModal": {
+						"heading": "Remove session",
+						"message": "Are you sure you want to remove this session? It will be ended on that device for good, and anything running in it will stop."
+					},
+					"successMessage": "Session removed",
+					"errorMessage": "Couldn't remove the session"
+				},
+				"sessionModal": {
+					"heading": "Session details",
+					"device": "Device:",
+					"location": "Location:",
+					"ipAddress": "IP address:",
+					"createdAt": "Created:"
+				}
 			}
 		}
 	},
@@ -290,6 +318,24 @@
 		"confirmModal": {
 			"cancel": "Cancel",
 			"continue": "Continue"
+		}
+	},
+	"utils": {
+		"formatDate": {
+			"months": {
+				"january": "January",
+				"february": "February",
+				"march": "March",
+				"april": "April",
+				"may": "May",
+				"june": "June",
+				"july": "July",
+				"august": "August",
+				"september": "September",
+				"october": "October",
+				"november": "November",
+				"december": "December"
+			}
 		}
 	}
 }
