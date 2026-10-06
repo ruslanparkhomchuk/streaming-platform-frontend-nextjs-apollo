@@ -34,7 +34,7 @@ async function findCategoryBySlug(params: { slug: string }) {
 			category: data.data
 				.findCategoryBySlug as FindCategoryBySlugQuery["findCategoryBySlug"],
 		};
-	} catch (error) {
+	} catch {
 		return notFound();
 	}
 }
