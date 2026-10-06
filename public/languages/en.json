@@ -124,6 +124,9 @@
 		"streamsHeading": "Channels you might like",
 		"categoriesHeading": "Categories you might like"
 	},
+	"categories": {
+		"heading": "Categories"
+	},
 	"dashboard": {
 		"settings": {
 			"header": {
