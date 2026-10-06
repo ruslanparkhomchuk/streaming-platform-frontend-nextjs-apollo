@@ -126,7 +126,10 @@
 		"categoriesHeading": "Категорії, які можуть вам сподобатися"
 	},
 	"categories": {
-		"heading": "Категорії"
+		"heading": "Категорії",
+		"overview": {
+			"heading": "Трансляції в цій категорії"
+		}
 	},
 	"dashboard": {
 		"settings": {

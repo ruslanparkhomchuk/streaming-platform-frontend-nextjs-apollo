@@ -125,7 +125,10 @@
 		"categoriesHeading": "Categories you might like"
 	},
 	"categories": {
-		"heading": "Categories"
+		"heading": "Categories",
+		"overview": {
+			"heading": "Streams in this category"
+		}
 	},
 	"dashboard": {
 		"settings": {
