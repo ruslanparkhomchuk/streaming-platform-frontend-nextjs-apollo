@@ -131,6 +131,10 @@
 			"heading": "Трансляції в цій категорії"
 		}
 	},
+	"streams": {
+		"heading": "Трансляції",
+		"searchHeading": "Результати пошуку за запитом"
+	},
 	"dashboard": {
 		"settings": {
 			"header": {

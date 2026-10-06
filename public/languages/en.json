@@ -130,6 +130,10 @@
 			"heading": "Streams in this category"
 		}
 	},
+	"streams": {
+		"heading": "Streams",
+		"searchHeading": "Search results for"
+	},
 	"dashboard": {
 		"settings": {
 			"header": {
