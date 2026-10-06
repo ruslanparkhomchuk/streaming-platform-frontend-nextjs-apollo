@@ -43,7 +43,12 @@ export function ChannelAvatar({ size, channel, isLive }: ChannelAvatarProps) {
 					src={getMediaSource(channel.avatar)}
 					className="object-cover"
 				/>
-				<AvatarFallback className={cn(size === "xl" && "text-4xl")}>
+				<AvatarFallback
+					className={cn(
+						size === "xl" && "text-4xl",
+						size === "lg" && "text-2xl",
+					)}
+				>
 					{channel.username[0]}
 				</AvatarFallback>
 			</Avatar>

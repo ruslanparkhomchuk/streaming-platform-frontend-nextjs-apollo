@@ -8,6 +8,7 @@ import { useStreamToken } from "@/hooks/useStreamToken";
 
 import { LIVEKIT_WS_URL } from "@/libs/constants/url.constants";
 
+import { StreamInfo } from "./info/StreamInfo";
 import { StreamVideo, StreamVideoSkeleton } from "./player/StreamVideo";
 
 interface StreamOverviewProps {
@@ -29,6 +30,7 @@ export function StreamOverview({ channel }: StreamOverviewProps) {
 		>
 			<div className="order-1 flex flex-col">
 				<StreamVideo channel={channel} />
+				<StreamInfo channel={channel} />
 			</div>
 			<div className="order-2 flex h-80 flex-col space-y-6">Chat</div>
 		</LiveKitRoom>

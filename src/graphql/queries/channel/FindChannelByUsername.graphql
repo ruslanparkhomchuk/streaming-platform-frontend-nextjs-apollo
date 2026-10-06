@@ -10,6 +10,9 @@ query FindChannelByUsername($username: String!) {
 			title
 			thumbnailUrl
 			isLive
+			category {
+				title
+			}
 		}
 	}
 }
