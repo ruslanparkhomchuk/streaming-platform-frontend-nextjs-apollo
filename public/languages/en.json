@@ -134,6 +134,70 @@
 		"heading": "Streams",
 		"searchHeading": "Search results for"
 	},
+	"stream": {
+		"video": {
+			"offline": "is offline",
+			"loading": "Connecting...",
+			"player": {
+				"volume": "Volume",
+				"fullscreen": {
+					"open": "Fullscreen",
+					"exit": "Exit fullscreen"
+				}
+			}
+		},
+		"info": {
+			"viewers": "viewers",
+			"offline": "Offline"
+		},
+		"actions": {
+			"follow": {
+				"confirmUnfollowHeading": "Unfollow",
+				"confirmUnfollowMessage": "You'll stop getting notifications from this channel, and it will be removed from your following list.",
+				"unfollowButton": "Unfollow",
+				"followButton": "Follow",
+				"successFollowMessage": "You're now following this channel",
+				"errorFollowMessage": "Couldn't follow the channel",
+				"successUnfollowMessage": "You unfollowed this channel",
+				"errorUnfollowMessage": "Couldn't unfollow the channel"
+			},
+			"support": {
+				"alreadySponsor": "You're already a sponsor",
+				"supportAuthor": "Support the author",
+				"perMonth": "per month",
+				"choose": "Choose",
+				"errorMessage": "Couldn't create the payment"
+			},
+			"share": {
+				"heading": "Share via"
+			}
+		},
+		"aboutChannel": {
+			"heading": "About",
+			"followersCount": "followers",
+			"noDescription": "No description provided"
+		},
+		"sponsors": {
+			"heading": "Channel sponsors"
+		},
+		"chat": {
+			"heading": "Chat",
+			"unavailable": "Chat unavailable",
+			"unavailableMessage": "Chat is unavailable while the channel isn't streaming. Check back later!",
+			"loading": "Connecting...",
+			"info": {
+				"authRequired": "Sign in required",
+				"chatDisabled": "Chat is disabled",
+				"premiumFollowersOnly": "Sponsors only",
+				"followersOnly": "Followers only"
+			},
+			"sendMessage": {
+				"placeholder": "Send a message",
+				"emojiPlaceholder": "Search",
+				"errorMessage": "Couldn't send the message"
+			}
+		}
+	},
 	"dashboard": {
 		"settings": {
 			"header": {

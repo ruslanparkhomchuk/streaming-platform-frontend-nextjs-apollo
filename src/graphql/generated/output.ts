@@ -787,7 +787,7 @@ export type FindChannelByUsernameQueryVariables = Exact<{
 }>;
 
 
-export type FindChannelByUsernameQuery = { __typename?: 'Query', findChannelByUsername: { __typename?: 'UserModel', id: string, displayName: string, username: string, avatar?: string | null, bio?: string | null, isVerified: boolean } };
+export type FindChannelByUsernameQuery = { __typename?: 'Query', findChannelByUsername: { __typename?: 'UserModel', id: string, displayName: string, username: string, avatar?: string | null, bio?: string | null, isVerified: boolean, stream?: { __typename?: 'StreamModel', title: string, thumbnailUrl?: string | null, isLive: boolean } | null } };
 
 export type FindRecommendedChannelsQueryVariables = Exact<{ [key: string]: never; }>;
 
@@ -1848,6 +1848,11 @@ export const FindChannelByUsernameDocument = gql`
     avatar
     bio
     isVerified
+    stream {
+      title
+      thumbnailUrl
+      isLive
+    }
   }
 }
     `;

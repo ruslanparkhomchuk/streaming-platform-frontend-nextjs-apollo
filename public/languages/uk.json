@@ -135,6 +135,70 @@
 		"heading": "Трансляції",
 		"searchHeading": "Результати пошуку за запитом"
 	},
+	"stream": {
+		"video": {
+			"offline": "не в мережі",
+			"loading": "Підключення...",
+			"player": {
+				"volume": "Гучність",
+				"fullscreen": {
+					"open": "Повноекранний режим",
+					"exit": "Вийти з повноекранного режиму"
+				}
+			}
+		},
+		"info": {
+			"viewers": "глядачів",
+			"offline": "Не в мережі"
+		},
+		"actions": {
+			"follow": {
+				"confirmUnfollowHeading": "Припинити відстежувати",
+				"confirmUnfollowMessage": "Ви більше не отримуватимете сповіщень від цього каналу, і він зникне зі списку відстежуваних.",
+				"unfollowButton": "Припинити відстежувати",
+				"followButton": "Відстежувати",
+				"successFollowMessage": "Ви підписалися на канал",
+				"errorFollowMessage": "Не вдалося підписатися",
+				"successUnfollowMessage": "Ви відписалися від каналу",
+				"errorUnfollowMessage": "Не вдалося відписатися"
+			},
+			"support": {
+				"alreadySponsor": "Ви вже спонсор",
+				"supportAuthor": "Підтримати автора",
+				"perMonth": "на місяць",
+				"choose": "Обрати",
+				"errorMessage": "Не вдалося створити платіж"
+			},
+			"share": {
+				"heading": "Поділитися через"
+			}
+		},
+		"aboutChannel": {
+			"heading": "Про",
+			"followersCount": "підписників",
+			"noDescription": "Опис не вказано"
+		},
+		"sponsors": {
+			"heading": "Спонсори каналу"
+		},
+		"chat": {
+			"heading": "Чат",
+			"unavailable": "Чат недоступний",
+			"unavailableMessage": "Чат недоступний, поки на каналі немає трансляції. Загляньте пізніше!",
+			"loading": "Підключення...",
+			"info": {
+				"authRequired": "Потрібна авторизація",
+				"chatDisabled": "Чат вимкнено",
+				"premiumFollowersOnly": "Лише для спонсорів",
+				"followersOnly": "Лише для підписників"
+			},
+			"sendMessage": {
+				"placeholder": "Надіслати повідомлення",
+				"emojiPlaceholder": "Пошук",
+				"errorMessage": "Не вдалося надіслати повідомлення"
+			}
+		}
+	},
 	"dashboard": {
 		"settings": {
 			"header": {
