@@ -120,6 +120,10 @@
 			"errorMessage": "Failed to deactivate account"
 		}
 	},
+	"home": {
+		"streamsHeading": "Channels you might like",
+		"categoriesHeading": "Categories you might like"
+	},
 	"dashboard": {
 		"settings": {
 			"header": {
@@ -470,6 +474,10 @@
 		},
 		"dataTable": {
 			"notFound": "Nothing found"
+		},
+		"emptyState": {
+			"heading": "Nothing found",
+			"text": "We looked everywhere, but nothing matched your search. Maybe try something else?"
 		}
 	},
 	"utils": {
