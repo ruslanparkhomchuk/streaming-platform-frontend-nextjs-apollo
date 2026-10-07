@@ -3,6 +3,8 @@ query FindSponsorsByChannel($channelId: String!) {
 		id
 		user {
 			id
+			username
+			avatar
 		}
 	}
 }

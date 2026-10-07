@@ -8,6 +8,8 @@ import { useStreamToken } from "@/hooks/useStreamToken";
 
 import { LIVEKIT_WS_URL } from "@/libs/constants/url.constants";
 
+import { AboutChannel, AboutChannelSkeleton } from "./info/AboutChannel";
+import { ChannelSponsors } from "./info/ChannelSponsors";
 import { StreamInfo, StreamInfoSkeleton } from "./info/StreamInfo";
 import { StreamVideo, StreamVideoSkeleton } from "./player/StreamVideo";
 
@@ -31,6 +33,8 @@ export function StreamOverview({ channel }: StreamOverviewProps) {
 			<div className="order-1 flex flex-col">
 				<StreamVideo channel={channel} />
 				<StreamInfo channel={channel} />
+				<AboutChannel channel={channel} />
+				<ChannelSponsors channel={channel} />
 			</div>
 			<div className="order-2 flex h-80 flex-col space-y-6">Chat</div>
 		</LiveKitRoom>
@@ -43,6 +47,7 @@ export function StreamOverviewSkeleton() {
 			<div className="order-1 flex flex-col">
 				<StreamVideoSkeleton />
 				<StreamInfoSkeleton />
+				<AboutChannelSkeleton />
 			</div>
 			<div className="order-2 flex h-80 flex-col space-y-6"></div>
 		</div>

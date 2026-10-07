@@ -810,7 +810,7 @@ export type FindChannelByUsernameQueryVariables = Exact<{
 }>;
 
 
-export type FindChannelByUsernameQuery = { __typename?: 'Query', findChannelByUsername: { __typename?: 'UserModel', id: string, displayName: string, username: string, avatar?: string | null, bio?: string | null, isVerified: boolean, stream?: { __typename?: 'StreamModel', title: string, thumbnailUrl?: string | null, isLive: boolean, category?: { __typename?: 'CategoryModel', title: string } | null } | null, sponsorshipPlans?: Array<{ __typename?: 'PlanModel', id: string, title: string, description?: string | null, price: number }> | null } };
+export type FindChannelByUsernameQuery = { __typename?: 'Query', findChannelByUsername: { __typename?: 'UserModel', id: string, displayName: string, username: string, avatar?: string | null, bio?: string | null, isVerified: boolean, socialLinks?: Array<{ __typename?: 'SocialLinkModel', id: string, title: string, url: string }> | null, stream?: { __typename?: 'StreamModel', title: string, thumbnailUrl?: string | null, isLive: boolean, category?: { __typename?: 'CategoryModel', title: string } | null } | null, sponsorshipPlans?: Array<{ __typename?: 'PlanModel', id: string, title: string, description?: string | null, price: number }> | null, followers?: Array<{ __typename?: 'FollowModel', id: string }> | null } };
 
 export type FindRecommendedChannelsQueryVariables = Exact<{ [key: string]: never; }>;
 
@@ -822,7 +822,7 @@ export type FindSponsorsByChannelQueryVariables = Exact<{
 }>;
 
 
-export type FindSponsorsByChannelQuery = { __typename?: 'Query', findSponsorsByChannel: Array<{ __typename?: 'SubscriptionModel', id: string, user?: { __typename?: 'UserModel', id: string } | null }> };
+export type FindSponsorsByChannelQuery = { __typename?: 'Query', findSponsorsByChannel: Array<{ __typename?: 'SubscriptionModel', id: string, user?: { __typename?: 'UserModel', id: string, username: string, avatar?: string | null } | null }> };
 
 export type FindMyFollowersQueryVariables = Exact<{ [key: string]: never; }>;
 
@@ -1978,6 +1978,11 @@ export const FindChannelByUsernameDocument = gql`
     avatar
     bio
     isVerified
+    socialLinks {
+      id
+      title
+      url
+    }
     stream {
       title
       thumbnailUrl
@@ -1991,6 +1996,9 @@ export const FindChannelByUsernameDocument = gql`
       title
       description
       price
+    }
+    followers {
+      id
     }
   }
 }
@@ -2084,6 +2092,8 @@ export const FindSponsorsByChannelDocument = gql`
     id
     user {
       id
+      username
+      avatar
     }
   }
 }

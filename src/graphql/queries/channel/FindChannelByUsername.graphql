@@ -6,6 +6,11 @@ query FindChannelByUsername($username: String!) {
 		avatar
 		bio
 		isVerified
+		socialLinks {
+			id
+			title
+			url
+		}
 		stream {
 			title
 			thumbnailUrl
@@ -19,6 +24,9 @@ query FindChannelByUsername($username: String!) {
 			title
 			description
 			price
+		}
+		followers {
+			id
 		}
 	}
 }
