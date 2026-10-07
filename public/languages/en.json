@@ -198,6 +198,20 @@
 			}
 		}
 	},
+	"success": {
+		"heading": "Payment successful!",
+		"details": {
+			"heading": "Sponsorship details:",
+			"price": "Price:",
+			"duration": "Duration:",
+			"channel": "Channel:",
+			"oneMonth": "1 month"
+		},
+		"congratulations": "You now have access to the channel's premium content!",
+		"backToHome": "Back to home",
+		"backToChannel": "Back to channel",
+		"support": "If you have any questions, contact our support team."
+	},
 	"dashboard": {
 		"settings": {
 			"header": {
