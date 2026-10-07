@@ -7,6 +7,8 @@ import { ChannelVerified } from "@/components/ui/elements/ChannelVerified";
 
 import type { FindChannelByUsernameQuery } from "@/graphql/generated/output";
 
+import { StreamActions } from "./StreamActions";
+
 interface StreamInfoProps {
 	channel: FindChannelByUsernameQuery["findChannelByUsername"];
 }
@@ -49,6 +51,7 @@ export function StreamInfo({ channel }: StreamInfoProps) {
 						)}
 					</div>
 				</div>
+				<StreamActions channel={channel} />
 			</div>
 		</div>
 	);

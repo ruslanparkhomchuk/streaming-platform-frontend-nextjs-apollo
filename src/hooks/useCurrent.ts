@@ -8,14 +8,26 @@ import {
 import { useAuth } from "./useAuth";
 
 export function useCurrent() {
-	const { isAuthenticated, exit } = useAuth();
+	const { isAuthenticated, auth, exit } = useAuth();
 
 	const { data, loading, refetch, error } = useFindProfileQuery();
 
 	const [clear] = useClearSessionCookieMutation();
 
 	useEffect(() => {
-		if (error) {
+		if (data?.findProfile && !isAuthenticated) {
+			auth();
+		}
+	}, [data, isAuthenticated, auth]);
+
+	useEffect(() => {
+		const isAuthError = error?.graphQLErrors.some(
+			e =>
+				e.extensions?.code === "UNAUTHENTICATED" ||
+				e.message === "Unauthorized",
+		);
+
+		if (isAuthError) {
 			if (isAuthenticated) {
 				clear();
 			}

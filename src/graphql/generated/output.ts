@@ -642,6 +642,20 @@ export type VerifyAccountMutationVariables = Exact<{
 
 export type VerifyAccountMutation = { __typename?: 'Mutation', verifyAccount: { __typename?: 'AuthModel', message?: string | null, user?: { __typename?: 'UserModel', isEmailVerified: boolean } | null } };
 
+export type FollowChannelMutationVariables = Exact<{
+  channelId: Scalars['String']['input'];
+}>;
+
+
+export type FollowChannelMutation = { __typename?: 'Mutation', followChannel: boolean };
+
+export type UnfollowChannelMutationVariables = Exact<{
+  channelId: Scalars['String']['input'];
+}>;
+
+
+export type UnfollowChannelMutation = { __typename?: 'Mutation', unfollowChannel: boolean };
+
 export type CreateSponsorshipPlanMutationVariables = Exact<{
   data: CreatePlanInput;
 }>;
@@ -798,6 +812,11 @@ export type FindMyFollowersQueryVariables = Exact<{ [key: string]: never; }>;
 
 
 export type FindMyFollowersQuery = { __typename?: 'Query', findMyFollowers: Array<{ __typename?: 'FollowModel', id: string, createdAt: any, follower?: { __typename?: 'UserModel', username: string, avatar?: string | null, isVerified: boolean } | null }> };
+
+export type FindMyFollowingsQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type FindMyFollowingsQuery = { __typename?: 'Query', findMyFollowings: Array<{ __typename?: 'FollowModel', id: string, createdAt: any, followingId: string, following?: { __typename?: 'UserModel', id: string, username: string, isVerified: boolean } | null }> };
 
 export type FindMySponsorshipPlansQueryVariables = Exact<{ [key: string]: never; }>;
 
@@ -1123,6 +1142,68 @@ export function useVerifyAccountMutation(baseOptions?: Apollo.MutationHookOption
 export type VerifyAccountMutationHookResult = ReturnType<typeof useVerifyAccountMutation>;
 export type VerifyAccountMutationResult = Apollo.MutationResult<VerifyAccountMutation>;
 export type VerifyAccountMutationOptions = Apollo.BaseMutationOptions<VerifyAccountMutation, VerifyAccountMutationVariables>;
+export const FollowChannelDocument = gql`
+    mutation FollowChannel($channelId: String!) {
+  followChannel(channelId: $channelId)
+}
+    `;
+export type FollowChannelMutationFn = Apollo.MutationFunction<FollowChannelMutation, FollowChannelMutationVariables>;
+
+/**
+ * __useFollowChannelMutation__
+ *
+ * To run a mutation, you first call `useFollowChannelMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useFollowChannelMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [followChannelMutation, { data, loading, error }] = useFollowChannelMutation({
+ *   variables: {
+ *      channelId: // value for 'channelId'
+ *   },
+ * });
+ */
+export function useFollowChannelMutation(baseOptions?: Apollo.MutationHookOptions<FollowChannelMutation, FollowChannelMutationVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useMutation<FollowChannelMutation, FollowChannelMutationVariables>(FollowChannelDocument, options);
+      }
+export type FollowChannelMutationHookResult = ReturnType<typeof useFollowChannelMutation>;
+export type FollowChannelMutationResult = Apollo.MutationResult<FollowChannelMutation>;
+export type FollowChannelMutationOptions = Apollo.BaseMutationOptions<FollowChannelMutation, FollowChannelMutationVariables>;
+export const UnfollowChannelDocument = gql`
+    mutation UnfollowChannel($channelId: String!) {
+  unfollowChannel(channelId: $channelId)
+}
+    `;
+export type UnfollowChannelMutationFn = Apollo.MutationFunction<UnfollowChannelMutation, UnfollowChannelMutationVariables>;
+
+/**
+ * __useUnfollowChannelMutation__
+ *
+ * To run a mutation, you first call `useUnfollowChannelMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useUnfollowChannelMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [unfollowChannelMutation, { data, loading, error }] = useUnfollowChannelMutation({
+ *   variables: {
+ *      channelId: // value for 'channelId'
+ *   },
+ * });
+ */
+export function useUnfollowChannelMutation(baseOptions?: Apollo.MutationHookOptions<UnfollowChannelMutation, UnfollowChannelMutationVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useMutation<UnfollowChannelMutation, UnfollowChannelMutationVariables>(UnfollowChannelDocument, options);
+      }
+export type UnfollowChannelMutationHookResult = ReturnType<typeof useUnfollowChannelMutation>;
+export type UnfollowChannelMutationResult = Apollo.MutationResult<UnfollowChannelMutation>;
+export type UnfollowChannelMutationOptions = Apollo.BaseMutationOptions<UnfollowChannelMutation, UnfollowChannelMutationVariables>;
 export const CreateSponsorshipPlanDocument = gql`
     mutation CreateSponsorshipPlan($data: CreatePlanInput!) {
   createSponsorshipPlan(data: $data)
@@ -1990,6 +2071,55 @@ export type FindMyFollowersQueryHookResult = ReturnType<typeof useFindMyFollower
 export type FindMyFollowersLazyQueryHookResult = ReturnType<typeof useFindMyFollowersLazyQuery>;
 export type FindMyFollowersSuspenseQueryHookResult = ReturnType<typeof useFindMyFollowersSuspenseQuery>;
 export type FindMyFollowersQueryResult = Apollo.QueryResult<FindMyFollowersQuery, FindMyFollowersQueryVariables>;
+export const FindMyFollowingsDocument = gql`
+    query FindMyFollowings {
+  findMyFollowings {
+    id
+    createdAt
+    followingId
+    following {
+      id
+      username
+      isVerified
+    }
+  }
+}
+    `;
+
+/**
+ * __useFindMyFollowingsQuery__
+ *
+ * To run a query within a React component, call `useFindMyFollowingsQuery` and pass it any options that fit your needs.
+ * When your component renders, `useFindMyFollowingsQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useFindMyFollowingsQuery({
+ *   variables: {
+ *   },
+ * });
+ */
+export function useFindMyFollowingsQuery(baseOptions?: Apollo.QueryHookOptions<FindMyFollowingsQuery, FindMyFollowingsQueryVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useQuery<FindMyFollowingsQuery, FindMyFollowingsQueryVariables>(FindMyFollowingsDocument, options);
+      }
+export function useFindMyFollowingsLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<FindMyFollowingsQuery, FindMyFollowingsQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return Apollo.useLazyQuery<FindMyFollowingsQuery, FindMyFollowingsQueryVariables>(FindMyFollowingsDocument, options);
+        }
+// @ts-ignore
+export function useFindMyFollowingsSuspenseQuery(baseOptions?: Apollo.SuspenseQueryHookOptions<FindMyFollowingsQuery, FindMyFollowingsQueryVariables>): Apollo.UseSuspenseQueryResult<FindMyFollowingsQuery, FindMyFollowingsQueryVariables>;
+export function useFindMyFollowingsSuspenseQuery(baseOptions?: Apollo.SkipToken | Apollo.SuspenseQueryHookOptions<FindMyFollowingsQuery, FindMyFollowingsQueryVariables>): Apollo.UseSuspenseQueryResult<FindMyFollowingsQuery | undefined, FindMyFollowingsQueryVariables>;
+export function useFindMyFollowingsSuspenseQuery(baseOptions?: Apollo.SkipToken | Apollo.SuspenseQueryHookOptions<FindMyFollowingsQuery, FindMyFollowingsQueryVariables>) {
+          const options = baseOptions === Apollo.skipToken ? baseOptions : {...defaultOptions, ...baseOptions}
+          return Apollo.useSuspenseQuery<FindMyFollowingsQuery, FindMyFollowingsQueryVariables>(FindMyFollowingsDocument, options);
+        }
+export type FindMyFollowingsQueryHookResult = ReturnType<typeof useFindMyFollowingsQuery>;
+export type FindMyFollowingsLazyQueryHookResult = ReturnType<typeof useFindMyFollowingsLazyQuery>;
+export type FindMyFollowingsSuspenseQueryHookResult = ReturnType<typeof useFindMyFollowingsSuspenseQuery>;
+export type FindMyFollowingsQueryResult = Apollo.QueryResult<FindMyFollowingsQuery, FindMyFollowingsQueryVariables>;
 export const FindMySponsorshipPlansDocument = gql`
     query FindMySponsorshipPlans {
   findMySponsorshipPlans {
