@@ -8,7 +8,7 @@ import { useStreamToken } from "@/hooks/useStreamToken";
 
 import { LIVEKIT_WS_URL } from "@/libs/constants/url.constants";
 
-import { StreamInfo } from "./info/StreamInfo";
+import { StreamInfo, StreamInfoSkeleton } from "./info/StreamInfo";
 import { StreamVideo, StreamVideoSkeleton } from "./player/StreamVideo";
 
 interface StreamOverviewProps {
@@ -42,6 +42,7 @@ export function StreamOverviewSkeleton() {
 		<div className="grid grid-cols-1 gap-6 lg:grid-cols-[minmax(0,1fr)_340px]">
 			<div className="order-1 flex flex-col">
 				<StreamVideoSkeleton />
+				<StreamInfoSkeleton />
 			</div>
 			<div className="order-2 flex h-80 flex-col space-y-6"></div>
 		</div>

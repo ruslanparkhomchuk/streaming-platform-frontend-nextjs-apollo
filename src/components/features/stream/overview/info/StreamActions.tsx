@@ -1,6 +1,9 @@
+import { Skeleton } from "@/components/ui/common/skeleton";
+
 import type { FindChannelByUsernameQuery } from "@/graphql/generated/output";
 
 import { FollowButton } from "./FollowButton";
+import { ShareActions } from "./ShareActions";
 import { SupportButton } from "./SupportButton";
 
 interface StreamActionsProps {
@@ -14,6 +17,18 @@ export function StreamActions({ channel }: StreamActionsProps) {
 			{channel.isVerified && !!channel.sponsorshipPlans?.length && (
 				<SupportButton channel={channel} />
 			)}
+			<ShareActions channel={channel} />
+		</div>
+	);
+}
+
+export function StreamActionsSkeleton() {
+	return (
+		<div className="mt-6 lg:mt-0">
+			<div className="items-center space-y-4 gap-x-4 lg:flex lg:space-y-0">
+				<Skeleton className="h-10 w-44 rounded-full" />
+				<Skeleton className="size-10 rounded-full" />
+			</div>
 		</div>
 	);
 }
