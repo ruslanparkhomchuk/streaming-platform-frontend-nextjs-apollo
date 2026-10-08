@@ -3,3 +3,4 @@ export const MEDIA_URL = process.env.NEXT_PUBLIC_MEDIA_URL as string;
 export const TELEGRAM_BOT_USERNAME = process.env
 	.NEXT_PUBLIC_TELEGRAM_BOT_USERNAME as string;
 export const LIVEKIT_WS_URL = process.env.NEXT_PUBLIC_LIVEKIT_WS_URL as string;
+export const WEBSOCKET_URL = process.env.NEXT_PUBLIC_WEBSOCKET_URL as string;

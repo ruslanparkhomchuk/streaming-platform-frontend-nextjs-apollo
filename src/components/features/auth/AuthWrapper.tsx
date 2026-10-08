@@ -30,9 +30,9 @@ export function AuthWrapper({
 					<Image
 						src="/images/logo.svg"
 						alt="Streaming Platform"
-						width={60}
-						height={40}
-						className="h-10 w-auto"
+						width={36}
+						height={36}
+						className="size-9"
 					/>
 					<CardTitle className="text-xl">{heading}</CardTitle>
 				</CardHeader>

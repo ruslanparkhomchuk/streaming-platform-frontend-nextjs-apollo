@@ -1,5 +1,6 @@
 "use client";
 
+import { useApolloClient } from "@apollo/client";
 import { LayoutDashboard, Loader, LogOut, User } from "lucide-react";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
@@ -29,8 +30,11 @@ export function ProfileMenu() {
 	const { exit } = useAuth();
 	const { user, isLoadingProfile } = useCurrent();
 
+	const client = useApolloClient();
+
 	const [logout] = useLogoutUserMutation({
 		onCompleted() {
+			client.clearStore();
 			exit();
 			toast.success(t("successMessage"));
 			router.push("/account/login");

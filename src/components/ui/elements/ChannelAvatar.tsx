@@ -40,7 +40,11 @@ export function ChannelAvatar({ size, channel, isLive }: ChannelAvatarProps) {
 				)}
 			>
 				<AvatarImage
-					src={getMediaSource(channel.avatar)}
+					src={
+						channel.avatar
+							? getMediaSource(channel.avatar)
+							: undefined
+					}
 					className="object-cover"
 				/>
 				<AvatarFallback

@@ -1,5 +1,6 @@
 "use client";
 
+import { useApolloClient } from "@apollo/client";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useTranslations } from "next-intl";
 import { useRouter } from "next/navigation";
@@ -52,12 +53,15 @@ export function DeactivateAccountForm() {
 		},
 	});
 
+	const client = useApolloClient();
+
 	const [deactivate, { loading: isLoadingDeactivate }] =
 		useDeactivateAccountMutation({
 			onCompleted(data) {
 				if (data.deactivateAccount.message) {
 					setIsShowConfirm(true);
 				} else {
+					client.clearStore();
 					exit();
 					toast.success(t("successMessage"));
 					router.push("/");

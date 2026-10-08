@@ -41,6 +41,7 @@ export function FollowButton({ channel }: FollowButtonProps) {
 	const [follow, { loading: isLoadingFollow }] = useFollowChannelMutation({
 		onCompleted() {
 			refetch();
+			router.refresh();
 			toast.success(t("successFollowMessage"));
 		},
 		onError() {
@@ -52,6 +53,7 @@ export function FollowButton({ channel }: FollowButtonProps) {
 		useUnfollowChannelMutation({
 			onCompleted() {
 				refetch();
+				router.refresh();
 				toast.success(t("successUnfollowMessage"));
 			},
 			onError() {

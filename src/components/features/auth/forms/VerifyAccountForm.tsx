@@ -1,5 +1,6 @@
 "use client";
 
+import { useApolloClient } from "@apollo/client";
 import { Loader } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { useRouter, useSearchParams } from "next/navigation";
@@ -22,8 +23,11 @@ export function VerifyAccountForm() {
 
 	const token = searchParams.get("token") ?? "";
 
+	const client = useApolloClient();
+
 	const [verify] = useVerifyAccountMutation({
 		onCompleted() {
+			client.resetStore();
 			auth();
 			toast.success(t("successMessage"));
 			router.push("/dashboard/settings");

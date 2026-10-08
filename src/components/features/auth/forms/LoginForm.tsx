@@ -1,5 +1,6 @@
 "use client";
 
+import { useApolloClient } from "@apollo/client";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
@@ -50,11 +51,14 @@ export function LoginForm() {
 		},
 	});
 
+	const client = useApolloClient();
+
 	const [login, { loading: isLoadingLogin }] = useLoginUserMutation({
 		onCompleted(data) {
 			if (data.loginUser.message) {
 				setIsShowTwoFactor(true);
 			} else {
+				client.resetStore();
 				auth();
 				toast.success(t("successMessage"));
 				router.push("/dashboard/settings");

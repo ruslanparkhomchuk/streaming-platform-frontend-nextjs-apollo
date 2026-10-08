@@ -19,12 +19,12 @@ import { useCurrent } from "@/hooks/useCurrent";
 import {
 	changeChatSettingsSchema,
 	type TypeChangeChatSettingsSchema,
-} from "@/schemas/stream/change-chat-settings.schema";
+} from "@/schemas/chat/change-chat-settings.schema";
 
 export function ChangeChatSettingsForm() {
 	const t = useTranslations("dashboard.chat");
 
-	const { user, isLoadingProfile } = useCurrent();
+	const { user, isLoadingProfile, refetch } = useCurrent();
 
 	const form = useForm<TypeChangeChatSettingsSchema>({
 		resolver: zodResolver(changeChatSettingsSchema),
@@ -39,6 +39,7 @@ export function ChangeChatSettingsForm() {
 	const [update, { loading: isLoadingUpdate }] =
 		useChangeChatSettingsMutation({
 			onCompleted() {
+				refetch();
 				toast.success(t("successMessage"));
 			},
 			onError() {
@@ -116,7 +117,9 @@ export function ChangeChatSettingsForm() {
 									description={t(
 										"isChatPremiumFollowersOnly.description",
 									)}
-									isDisabled={isLoadingUpdate}
+									isDisabled={
+										isLoadingUpdate || !user?.isVerified
+									}
 									value={field.value}
 									onChange={value =>
 										onChange(

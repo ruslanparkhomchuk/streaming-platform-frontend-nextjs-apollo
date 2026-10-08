@@ -23,9 +23,7 @@ async function findChannelByUsername(params: { username: string }) {
 				"Content-Type": "application/json",
 			},
 			body: JSON.stringify({ query, variables }),
-			next: {
-				revalidate: 30,
-			},
+			cache: "no-store",
 		});
 
 		const data = await response.json();
@@ -50,12 +48,14 @@ export async function generateMetadata(props: {
 		title: channel.displayName,
 		description: channel.bio ?? channel.displayName,
 		openGraph: {
-			images: [
-				{
-					url: getMediaSource(channel.avatar),
-					alt: channel.displayName,
-				},
-			],
+			images: channel.avatar
+				? [
+						{
+							url: getMediaSource(channel.avatar),
+							alt: channel.displayName,
+						},
+					]
+				: [],
 		},
 	};
 }
