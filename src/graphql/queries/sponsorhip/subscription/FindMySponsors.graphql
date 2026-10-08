@@ -3,11 +3,13 @@ query FindMySponsors {
 		id
 		expiresAt
 		user {
+			id
 			username
 			avatar
 			isVerified
 		}
 		plan {
+			id
 			title
 		}
 	}

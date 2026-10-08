@@ -5,6 +5,7 @@ query FindRecommendedChannels {
 		avatar
 		isVerified
 		stream {
+			id
 			isLive
 		}
 	}

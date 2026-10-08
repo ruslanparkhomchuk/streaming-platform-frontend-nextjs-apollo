@@ -196,6 +196,32 @@
 				"emojiPlaceholder": "Search",
 				"errorMessage": "Couldn't send the message"
 			}
+		},
+		"settings": {
+			"heading": "Stream settings",
+			"thumbnail": {
+				"updateButton": "Update image",
+				"confirmModal": {
+					"heading": "Remove stream thumbnail",
+					"message": "Are you sure you want to remove the stream thumbnail? This can't be undone."
+				},
+				"info": "Supported formats: JPG, JPEG, PNG or GIF. Max size: 10 MB.",
+				"successUpdateMessage": "Stream thumbnail updated",
+				"errorUpdateMessage": "Couldn't update the stream thumbnail",
+				"successRemoveMessage": "Stream thumbnail removed",
+				"errorRemoveMessage": "Couldn't remove the stream thumbnail"
+			},
+			"info": {
+				"titleLabel": "Title",
+				"titlePlaceholder": "Playing GTA 5",
+				"titleDescription": "Enter a title for your stream. Keep it short and memorable.",
+				"categoryLabel": "Category",
+				"categoryPlaceholder": "Select a category",
+				"categoryDescription": "Choose the category your content fits. It helps viewers find your streams.",
+				"submitButton": "Save changes",
+				"successMessage": "Stream settings updated",
+				"errorMessage": "Couldn't update stream settings"
+			}
 		}
 	},
 	"success": {

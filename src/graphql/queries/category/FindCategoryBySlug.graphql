@@ -10,11 +10,13 @@ query FindCategoryBySlug($slug: String!) {
 			thumbnailUrl
 			isLive
 			user {
+				id
 				username
 				avatar
 				isVerified
 			}
 			category {
+				id
 				title
 				slug
 			}

@@ -686,6 +686,20 @@ export type RemoveSponsorshipPlanMutationVariables = Exact<{
 
 export type RemoveSponsorshipPlanMutation = { __typename?: 'Mutation', removeSponsorshipPlan: boolean };
 
+export type ChangeStreamInfoMutationVariables = Exact<{
+  data: ChangeStreamInfoInput;
+}>;
+
+
+export type ChangeStreamInfoMutation = { __typename?: 'Mutation', changeStreamInfo: boolean };
+
+export type ChangeStreamThumbnailMutationVariables = Exact<{
+  thumbnail: Scalars['Upload']['input'];
+}>;
+
+
+export type ChangeStreamThumbnailMutation = { __typename?: 'Mutation', changeStreamThumbnail: boolean };
+
 export type CreateIngressMutationVariables = Exact<{
   ingressType: Scalars['Float']['input'];
 }>;
@@ -699,6 +713,11 @@ export type GenerateStreamTokenMutationVariables = Exact<{
 
 
 export type GenerateStreamTokenMutation = { __typename?: 'Mutation', generateStreamToken: { __typename?: 'GenerateStreamTokenModel', token: string } };
+
+export type RemoveStreamThumbnailMutationVariables = Exact<{ [key: string]: never; }>;
+
+
+export type RemoveStreamThumbnailMutation = { __typename?: 'Mutation', removeStreamThumbnail: boolean };
 
 export type MakePaymentMutationVariables = Exact<{
   planId: Scalars['String']['input'];
@@ -805,7 +824,7 @@ export type FindCategoryBySlugQueryVariables = Exact<{
 }>;
 
 
-export type FindCategoryBySlugQuery = { __typename?: 'Query', findCategoryBySlug: { __typename?: 'CategoryModel', id: string, title: string, thumbnailUrl: string, description?: string | null, streams?: Array<{ __typename?: 'StreamModel', id: string, title: string, thumbnailUrl?: string | null, isLive: boolean, user?: { __typename?: 'UserModel', username: string, avatar?: string | null, isVerified: boolean } | null, category?: { __typename?: 'CategoryModel', title: string, slug: string } | null }> | null } };
+export type FindCategoryBySlugQuery = { __typename?: 'Query', findCategoryBySlug: { __typename?: 'CategoryModel', id: string, title: string, thumbnailUrl: string, description?: string | null, streams?: Array<{ __typename?: 'StreamModel', id: string, title: string, thumbnailUrl?: string | null, isLive: boolean, user?: { __typename?: 'UserModel', id: string, username: string, avatar?: string | null, isVerified: boolean } | null, category?: { __typename?: 'CategoryModel', id: string, title: string, slug: string } | null }> | null } };
 
 export type FindRandomCategoriesQueryVariables = Exact<{ [key: string]: never; }>;
 
@@ -817,12 +836,12 @@ export type FindChannelByUsernameQueryVariables = Exact<{
 }>;
 
 
-export type FindChannelByUsernameQuery = { __typename?: 'Query', findChannelByUsername: { __typename?: 'UserModel', id: string, displayName: string, username: string, avatar?: string | null, bio?: string | null, isVerified: boolean, socialLinks?: Array<{ __typename?: 'SocialLinkModel', id: string, title: string, url: string }> | null, stream?: { __typename?: 'StreamModel', id: string, title: string, thumbnailUrl?: string | null, isLive: boolean, isChatEnabled: boolean, isChatFollowersOnly: boolean, isChatPremiumFollowersOnly: boolean, category?: { __typename?: 'CategoryModel', title: string } | null } | null, sponsorshipPlans?: Array<{ __typename?: 'PlanModel', id: string, title: string, description?: string | null, price: number }> | null, followers?: Array<{ __typename?: 'FollowModel', id: string }> | null } };
+export type FindChannelByUsernameQuery = { __typename?: 'Query', findChannelByUsername: { __typename?: 'UserModel', id: string, displayName: string, username: string, avatar?: string | null, bio?: string | null, isVerified: boolean, socialLinks?: Array<{ __typename?: 'SocialLinkModel', id: string, title: string, url: string }> | null, stream?: { __typename?: 'StreamModel', id: string, title: string, thumbnailUrl?: string | null, isLive: boolean, isChatEnabled: boolean, isChatFollowersOnly: boolean, isChatPremiumFollowersOnly: boolean, category?: { __typename?: 'CategoryModel', id: string, title: string } | null } | null, sponsorshipPlans?: Array<{ __typename?: 'PlanModel', id: string, title: string, description?: string | null, price: number }> | null, followers?: Array<{ __typename?: 'FollowModel', id: string }> | null } };
 
 export type FindRecommendedChannelsQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type FindRecommendedChannelsQuery = { __typename?: 'Query', findRecommendedChannels: Array<{ __typename?: 'UserModel', id: string, username: string, avatar?: string | null, isVerified: boolean, stream?: { __typename?: 'StreamModel', isLive: boolean } | null }> };
+export type FindRecommendedChannelsQuery = { __typename?: 'Query', findRecommendedChannels: Array<{ __typename?: 'UserModel', id: string, username: string, avatar?: string | null, isVerified: boolean, stream?: { __typename?: 'StreamModel', id: string, isLive: boolean } | null }> };
 
 export type FindSponsorsByChannelQueryVariables = Exact<{
   channelId: Scalars['String']['input'];
@@ -841,7 +860,7 @@ export type FindChatMessagesByStreamQuery = { __typename?: 'Query', findChatMess
 export type FindMyFollowersQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type FindMyFollowersQuery = { __typename?: 'Query', findMyFollowers: Array<{ __typename?: 'FollowModel', id: string, createdAt: any, follower?: { __typename?: 'UserModel', username: string, avatar?: string | null, isVerified: boolean } | null }> };
+export type FindMyFollowersQuery = { __typename?: 'Query', findMyFollowers: Array<{ __typename?: 'FollowModel', id: string, createdAt: any, follower?: { __typename?: 'UserModel', id: string, username: string, avatar?: string | null, isVerified: boolean } | null }> };
 
 export type FindMyFollowingsQueryVariables = Exact<{ [key: string]: never; }>;
 
@@ -856,7 +875,7 @@ export type FindMySponsorshipPlansQuery = { __typename?: 'Query', findMySponsors
 export type FindMySponsorsQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type FindMySponsorsQuery = { __typename?: 'Query', findMySponsors: Array<{ __typename?: 'SubscriptionModel', id: string, expiresAt: any, user?: { __typename?: 'UserModel', username: string, avatar?: string | null, isVerified: boolean } | null, plan?: { __typename?: 'PlanModel', title: string } | null }> };
+export type FindMySponsorsQuery = { __typename?: 'Query', findMySponsors: Array<{ __typename?: 'SubscriptionModel', id: string, expiresAt: any, user?: { __typename?: 'UserModel', id: string, username: string, avatar?: string | null, isVerified: boolean } | null, plan?: { __typename?: 'PlanModel', id: string, title: string } | null }> };
 
 export type FindMyTransactionsQueryVariables = Exact<{ [key: string]: never; }>;
 
@@ -868,12 +887,12 @@ export type FindAllStreamsQueryVariables = Exact<{
 }>;
 
 
-export type FindAllStreamsQuery = { __typename?: 'Query', findAllStreams: Array<{ __typename?: 'StreamModel', id: string, title: string, thumbnailUrl?: string | null, isLive: boolean, user?: { __typename?: 'UserModel', username: string, avatar?: string | null, isVerified: boolean } | null, category?: { __typename?: 'CategoryModel', title: string, slug: string } | null }> };
+export type FindAllStreamsQuery = { __typename?: 'Query', findAllStreams: Array<{ __typename?: 'StreamModel', id: string, title: string, thumbnailUrl?: string | null, isLive: boolean, user?: { __typename?: 'UserModel', id: string, username: string, avatar?: string | null, isVerified: boolean } | null, category?: { __typename?: 'CategoryModel', id: string, title: string, slug: string } | null }> };
 
 export type FindRandomStreamsQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type FindRandomStreamsQuery = { __typename?: 'Query', findRandomStreams: Array<{ __typename?: 'StreamModel', id: string, title: string, thumbnailUrl?: string | null, isLive: boolean, user?: { __typename?: 'UserModel', username: string, avatar?: string | null, isVerified: boolean } | null, category?: { __typename?: 'CategoryModel', title: string, slug: string } | null }> };
+export type FindRandomStreamsQuery = { __typename?: 'Query', findRandomStreams: Array<{ __typename?: 'StreamModel', id: string, title: string, thumbnailUrl?: string | null, isLive: boolean, user?: { __typename?: 'UserModel', id: string, username: string, avatar?: string | null, isVerified: boolean } | null, category?: { __typename?: 'CategoryModel', id: string, title: string, slug: string } | null }> };
 
 export type FindCurrentSessionQueryVariables = Exact<{ [key: string]: never; }>;
 
@@ -893,7 +912,7 @@ export type FindNotificationsUnreadCountQuery = { __typename?: 'Query', findNoti
 export type FindProfileQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type FindProfileQuery = { __typename?: 'Query', findProfile: { __typename?: 'UserModel', id: string, username: string, displayName: string, email?: string | null, avatar?: string | null, bio?: string | null, isVerified: boolean, isTotpEnabled: boolean, notificationSettings?: { __typename?: 'NotificationSettingsModel', siteNotifications: boolean, telegramNotifications: boolean } | null, stream?: { __typename?: 'StreamModel', serverUrl?: string | null, streamKey?: string | null, isChatEnabled: boolean, isChatFollowersOnly: boolean, isChatPremiumFollowersOnly: boolean } | null } };
+export type FindProfileQuery = { __typename?: 'Query', findProfile: { __typename?: 'UserModel', id: string, username: string, displayName: string, email?: string | null, avatar?: string | null, bio?: string | null, isVerified: boolean, isTotpEnabled: boolean, notificationSettings?: { __typename?: 'NotificationSettingsModel', id: string, siteNotifications: boolean, telegramNotifications: boolean } | null, stream?: { __typename?: 'StreamModel', id: string, serverUrl?: string | null, streamKey?: string | null, isChatEnabled: boolean, isChatFollowersOnly: boolean, isChatPremiumFollowersOnly: boolean } | null } };
 
 export type FindSessionsByUserQueryVariables = Exact<{ [key: string]: never; }>;
 
@@ -1367,6 +1386,68 @@ export function useRemoveSponsorshipPlanMutation(baseOptions?: Apollo.MutationHo
 export type RemoveSponsorshipPlanMutationHookResult = ReturnType<typeof useRemoveSponsorshipPlanMutation>;
 export type RemoveSponsorshipPlanMutationResult = Apollo.MutationResult<RemoveSponsorshipPlanMutation>;
 export type RemoveSponsorshipPlanMutationOptions = Apollo.BaseMutationOptions<RemoveSponsorshipPlanMutation, RemoveSponsorshipPlanMutationVariables>;
+export const ChangeStreamInfoDocument = gql`
+    mutation ChangeStreamInfo($data: ChangeStreamInfoInput!) {
+  changeStreamInfo(data: $data)
+}
+    `;
+export type ChangeStreamInfoMutationFn = Apollo.MutationFunction<ChangeStreamInfoMutation, ChangeStreamInfoMutationVariables>;
+
+/**
+ * __useChangeStreamInfoMutation__
+ *
+ * To run a mutation, you first call `useChangeStreamInfoMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useChangeStreamInfoMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [changeStreamInfoMutation, { data, loading, error }] = useChangeStreamInfoMutation({
+ *   variables: {
+ *      data: // value for 'data'
+ *   },
+ * });
+ */
+export function useChangeStreamInfoMutation(baseOptions?: Apollo.MutationHookOptions<ChangeStreamInfoMutation, ChangeStreamInfoMutationVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useMutation<ChangeStreamInfoMutation, ChangeStreamInfoMutationVariables>(ChangeStreamInfoDocument, options);
+      }
+export type ChangeStreamInfoMutationHookResult = ReturnType<typeof useChangeStreamInfoMutation>;
+export type ChangeStreamInfoMutationResult = Apollo.MutationResult<ChangeStreamInfoMutation>;
+export type ChangeStreamInfoMutationOptions = Apollo.BaseMutationOptions<ChangeStreamInfoMutation, ChangeStreamInfoMutationVariables>;
+export const ChangeStreamThumbnailDocument = gql`
+    mutation ChangeStreamThumbnail($thumbnail: Upload!) {
+  changeStreamThumbnail(thumbnail: $thumbnail)
+}
+    `;
+export type ChangeStreamThumbnailMutationFn = Apollo.MutationFunction<ChangeStreamThumbnailMutation, ChangeStreamThumbnailMutationVariables>;
+
+/**
+ * __useChangeStreamThumbnailMutation__
+ *
+ * To run a mutation, you first call `useChangeStreamThumbnailMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useChangeStreamThumbnailMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [changeStreamThumbnailMutation, { data, loading, error }] = useChangeStreamThumbnailMutation({
+ *   variables: {
+ *      thumbnail: // value for 'thumbnail'
+ *   },
+ * });
+ */
+export function useChangeStreamThumbnailMutation(baseOptions?: Apollo.MutationHookOptions<ChangeStreamThumbnailMutation, ChangeStreamThumbnailMutationVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useMutation<ChangeStreamThumbnailMutation, ChangeStreamThumbnailMutationVariables>(ChangeStreamThumbnailDocument, options);
+      }
+export type ChangeStreamThumbnailMutationHookResult = ReturnType<typeof useChangeStreamThumbnailMutation>;
+export type ChangeStreamThumbnailMutationResult = Apollo.MutationResult<ChangeStreamThumbnailMutation>;
+export type ChangeStreamThumbnailMutationOptions = Apollo.BaseMutationOptions<ChangeStreamThumbnailMutation, ChangeStreamThumbnailMutationVariables>;
 export const CreateIngressDocument = gql`
     mutation CreateIngress($ingressType: Float!) {
   createIngress(ingressType: $ingressType)
@@ -1431,6 +1512,36 @@ export function useGenerateStreamTokenMutation(baseOptions?: Apollo.MutationHook
 export type GenerateStreamTokenMutationHookResult = ReturnType<typeof useGenerateStreamTokenMutation>;
 export type GenerateStreamTokenMutationResult = Apollo.MutationResult<GenerateStreamTokenMutation>;
 export type GenerateStreamTokenMutationOptions = Apollo.BaseMutationOptions<GenerateStreamTokenMutation, GenerateStreamTokenMutationVariables>;
+export const RemoveStreamThumbnailDocument = gql`
+    mutation RemoveStreamThumbnail {
+  removeStreamThumbnail
+}
+    `;
+export type RemoveStreamThumbnailMutationFn = Apollo.MutationFunction<RemoveStreamThumbnailMutation, RemoveStreamThumbnailMutationVariables>;
+
+/**
+ * __useRemoveStreamThumbnailMutation__
+ *
+ * To run a mutation, you first call `useRemoveStreamThumbnailMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useRemoveStreamThumbnailMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [removeStreamThumbnailMutation, { data, loading, error }] = useRemoveStreamThumbnailMutation({
+ *   variables: {
+ *   },
+ * });
+ */
+export function useRemoveStreamThumbnailMutation(baseOptions?: Apollo.MutationHookOptions<RemoveStreamThumbnailMutation, RemoveStreamThumbnailMutationVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useMutation<RemoveStreamThumbnailMutation, RemoveStreamThumbnailMutationVariables>(RemoveStreamThumbnailDocument, options);
+      }
+export type RemoveStreamThumbnailMutationHookResult = ReturnType<typeof useRemoveStreamThumbnailMutation>;
+export type RemoveStreamThumbnailMutationResult = Apollo.MutationResult<RemoveStreamThumbnailMutation>;
+export type RemoveStreamThumbnailMutationOptions = Apollo.BaseMutationOptions<RemoveStreamThumbnailMutation, RemoveStreamThumbnailMutationVariables>;
 export const MakePaymentDocument = gql`
     mutation MakePayment($planId: String!) {
   makePayment(planId: $planId) {
@@ -1930,11 +2041,13 @@ export const FindCategoryBySlugDocument = gql`
       thumbnailUrl
       isLive
       user {
+        id
         username
         avatar
         isVerified
       }
       category {
+        id
         title
         slug
       }
@@ -2046,6 +2159,7 @@ export const FindChannelByUsernameDocument = gql`
       isChatFollowersOnly
       isChatPremiumFollowersOnly
       category {
+        id
         title
       }
     }
@@ -2105,6 +2219,7 @@ export const FindRecommendedChannelsDocument = gql`
     avatar
     isVerified
     stream {
+      id
       isLive
     }
   }
@@ -2248,6 +2363,7 @@ export const FindMyFollowersDocument = gql`
     id
     createdAt
     follower {
+      id
       username
       avatar
       isVerified
@@ -2390,11 +2506,13 @@ export const FindMySponsorsDocument = gql`
     id
     expiresAt
     user {
+      id
       username
       avatar
       isVerified
     }
     plan {
+      id
       title
     }
   }
@@ -2488,11 +2606,13 @@ export const FindAllStreamsDocument = gql`
     thumbnailUrl
     isLive
     user {
+      id
       username
       avatar
       isVerified
     }
     category {
+      id
       title
       slug
     }
@@ -2543,11 +2663,13 @@ export const FindRandomStreamsDocument = gql`
     thumbnailUrl
     isLive
     user {
+      id
       username
       avatar
       isVerified
     }
     category {
+      id
       title
       slug
     }
@@ -2741,10 +2863,12 @@ export const FindProfileDocument = gql`
     isVerified
     isTotpEnabled
     notificationSettings {
+      id
       siteNotifications
       telegramNotifications
     }
     stream {
+      id
       serverUrl
       streamKey
       isChatEnabled

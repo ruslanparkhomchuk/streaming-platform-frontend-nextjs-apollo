@@ -9,10 +9,12 @@ query FindProfile {
 		isVerified
 		isTotpEnabled
 		notificationSettings {
+			id
 			siteNotifications
 			telegramNotifications
 		}
 		stream {
+			id
 			serverUrl
 			streamKey
 			isChatEnabled
