@@ -64,8 +64,12 @@ export function LoginForm() {
 				router.push("/dashboard/settings");
 			}
 		},
-		onError() {
-			toast.error(t("errorMessage"));
+		onError(error) {
+			if (error.message.includes("Too Many Requests")) {
+				toast.error(t("tooManyRequests"));
+			} else {
+				toast.error(t("errorMessage"));
+			}
 		},
 	});
 

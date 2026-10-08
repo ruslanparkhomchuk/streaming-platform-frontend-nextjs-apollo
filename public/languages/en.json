@@ -83,7 +83,8 @@
 			"pinDescription": "Enter the code from your authenticator app.",
 			"submitButton": "Log in",
 			"successMessage": "You've logged in successfully",
-			"errorMessage": "Failed to log in"
+			"errorMessage": "Failed to log in",
+			"tooManyRequests": "Too many attempts. Please try again in a minute."
 		},
 		"resetPassword": {
 			"heading": "Reset password",
