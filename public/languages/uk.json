@@ -576,6 +576,10 @@
 			}
 		}
 	},
+	"notFound": {
+		"description": "Упс, щось пішло не так.",
+		"backToHome": "Перейти на головну"
+	},
 	"components": {
 		"liveBadge": {
 			"text": "НАЖИВО"
